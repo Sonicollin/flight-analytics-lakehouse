@@ -12,7 +12,7 @@ dependencies = [
     "httpx",
     "pytest",
     "pydantic",
-    "pydantic-settings"
+    "pydantic-settings",
 ]
 
 [tool.pytest.ini_options]
