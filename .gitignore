@@ -1,0 +1,18 @@
+# Data Directories (Exclude generated parquet files, keep structure)
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Pytest / Coverage
+.pytest_cache/
+.coverage
+
+# Byte-compiled / optimized files
+__pycache__/
+*.pyc
+
+# Virtual Environments
+.venv/
+venv/
+env/

@@ -1,6 +1,6 @@
 from pathlib import Path
 import httpx
-from src.config import config
+from config import config
 
 class BTSDataIngestor:
     """Streams and manages raw BTS Flight Delay data archives."""
