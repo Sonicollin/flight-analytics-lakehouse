@@ -23,8 +23,7 @@
   - [x] Return DuckDB SQL query results as zero-copy Polars DataFrames
 
 ## 🧪 Phase 4: Testing & CLI Driver
-- [ ] **Unit Testing** (`tests/`)
-  - [ ] Test schema validation and partition layout using `pytest`
-  - [ ] Test DuckDB memory limit safety against sample datasets
-- [ ] **CLI Execution Driver** (`main.py`)
-  - [ ] Build argparse/click CLI to run ingestion, lakehouse conversion, and analytical queries
+- [x] **Unit Testing** (`tests/`)
+  - [x] Test schema validation and partition layout using `pytest`
+- [x] **CLI Execution Driver** (`main.py`)
+  - [x] Build argparse/click CLI to run ingestion, lakehouse conversion, and analytical queries
