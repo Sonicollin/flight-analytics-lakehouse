@@ -14,7 +14,7 @@ class OpenSkyStateVectorContract(BaseModel):
     )
     icao24: str = Field(
         ..., 
-        min_length=6, 
+        min_length=6,
         max_length=6, 
         description="Unique 24-bit ICAO transponder address in hexadecimal."
     )
