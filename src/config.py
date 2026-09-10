@@ -13,6 +13,9 @@ class SystemConfig(BaseSettings):
     RAW_DATA_DIR: Path = BASE_DIR / "data" / "raw"
     PROCESSED_DATA_DIR: Path = BASE_DIR / "data" / "processed"
 
+    # Persistent Storage Target
+    DUCKDB_PATH: Path = BASE_DIR / "data" / "lakehouse.duckdb"
+
     # DuckDB In-Process Engine Limits
     # Prevents OOM by capping maximum RAM allocation for query execution
     DUCKDB_MEMORY_LIMIT: str = Field(default="4GB", description="Maximum RAM allocated to DuckDB")
@@ -22,6 +25,7 @@ class SystemConfig(BaseSettings):
         """Create local data directories if they do not exist."""
         SystemConfig().RAW_DATA_DIR.mkdir(parents=True, exist_ok=True)
         SystemConfig().PROCESSED_DATA_DIR.mkdir(parents=True, exist_ok=True)
+        SystemConfig().DUCKDB_PATH.parent.mkdir(parents=True, exist_ok=True)
 
 # Instantiate singleton configuration
 config = SystemConfig()

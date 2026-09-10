@@ -4,3 +4,4 @@ polars
 httpx
 pytest
 pydantic
+dlt

@@ -13,6 +13,7 @@ dependencies = [
     "pytest",
     "pydantic",
     "pydantic-settings",
+    "dlt",
 ]
 
 [tool.pytest.ini_options]
