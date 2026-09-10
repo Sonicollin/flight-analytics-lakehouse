@@ -29,7 +29,7 @@ class BTSDataIngestor:
             print(f"Archive already exists locally: {target_path}")
             return target_path
 
-        print(f"Downloading {filename} from BTS...")
+        print(f"Downloading BTS archive for {year}-{month}...")
         
         # Stream response in chunks to prevent high memory consumption
         with httpx.stream("GET", download_url, timeout=120.0, follow_redirects=True) as response:

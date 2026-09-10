@@ -8,8 +8,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 class SystemConfig(BaseSettings):
     """Global configuration settings for data paths and DuckDB execution limits."""
-
-
+    
     # Data Storage Paths
     RAW_DATA_DIR: Path = BASE_DIR / "data" / "raw"
     PROCESSED_DATA_DIR: Path = BASE_DIR / "data" / "processed"
