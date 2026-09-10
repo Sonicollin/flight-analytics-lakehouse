@@ -2,6 +2,7 @@ import dlt
 import httpx
 from pathlib import Path
 from config import config
+from contracts import validate_state_vectors
 
 class BTSDataIngestor:
     """Streams and manages raw BTS Flight Delay data archives."""
@@ -120,7 +121,13 @@ class OpenSkyIngestor:
         Returns:
             dlt.Pipeline execution report instance.
         """
-        records = self.fetch_live_states(bbox=bbox)
+        raw_records = self.fetch_live_states(bbox=bbox)
+
+        # Enforce Pydantic Data Contract
+        valid_records, rejected = validate_state_vectors(raw_records)
+
+        if rejected:
+            print(f"Warning: {len(rejected)} records failed contract validation and were dropped.")
 
         # Configure dlt pipeline to target local DuckDB file
         pipeline = dlt.pipeline(
@@ -131,7 +138,7 @@ class OpenSkyIngestor:
 
         @dlt.resource(name=table_name, write_disposition="append")
         def opensky_resource():
-            yield records
+            yield valid_records
 
         print(f"Executing dlt pipeline -> Loading into table '{table_name}'...")
         load_info = pipeline.run(opensky_resource())
