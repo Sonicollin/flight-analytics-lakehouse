@@ -49,7 +49,7 @@ class OpenSkyIngestor:
     def __init__(self, base_url: str = "https://opensky-network.org/api") -> None:
         self.base_url = base_url.rstrip("/")
 
-    def fetch_live_states(self, bbox: tuple[float, float, float, float] | None = None) -> list[dict]:
+    def fetch_live_states(self, bbox: tuple[float, float, float, float] | None = (24.39, 49.38, -124.84, -66.88)) -> list[dict]:
                                 # bbox means "Bounding Box" -> defines a rectangular geographical region on a map using four coordinates.
         """
         Fetches live aircraft state vectors from OpenSky REST API and normalizes
@@ -65,13 +65,15 @@ class OpenSkyIngestor:
         endpoint = f"{self.base_url}/states/all"
         params = {}
 
-        if bbox:
-            params = {
-                "lamin": bbox[0], # South boundary
-                "lamax": bbox[1], # North boundary
-                "lomin": bbox[2], # West boundary
-                "lomax": bbox[3], # East boundary
-            }
+        if bbox is None:
+            bbox = (24.39, 49.38, -124.84, -66.88)
+
+        params = {
+            "lamin": bbox[0],
+            "lamax": bbox[1],
+            "lomin": bbox[2],
+            "lomax": bbox[3],
+        }
 
         print("Fetching live state vectors from OpenSky API...")
         response = httpx.get(endpoint, params=params, timeout=30.0)
