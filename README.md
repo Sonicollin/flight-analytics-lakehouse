@@ -7,7 +7,7 @@ This project demonstrates an out-of-core **Local Data Lakehouse** architecture b
 ---
 
 ## 🏗️ Architecture & Stack
-
+```text
 ┌────────────────┐       ┌─────────────────┐       ┌────────────────────┐       ┌──────────────────┐
 │  BTS Archives  │ ────> │ Streaming Fetch │ ────> │ Hive Partitioning  │ ────> │ DuckDB Execution │
 │  (Remote ZIP)  │       │  (httpx stream) │       │ (PyArrow + Polars) │       │   (OLAP Engine)  │
@@ -18,7 +18,7 @@ This project demonstrates an out-of-core **Local Data Lakehouse** architecture b
 │ Zero-Copy Polars │
 │    DataFrame     │
 └──────────────────┘
-
+```
 * **Ingestion:** `httpx` (Chunked HTTP streaming for safe memory handling)
 * **Storage & Transformation:** `Polars` & `PyArrow` (CSV-to-Parquet conversion with Hive partitioning)
 * **Analytics Engine:** `DuckDB` (In-process OLAP engine running SQL CTEs & Window Functions)
@@ -68,7 +68,7 @@ python main.py --year 2023 --month 1
 ## Sample Output
 
 Running main.py generates on-disk Parquet partitions and executes a carrier reliability analysis ranking airlines by average delay:
-
+```text
 ==================================================
 🚀 Launching Lakehouse Pipeline for 2023-01
 ==================================================
@@ -98,7 +98,7 @@ shape: (14, 6)
 ==================================================
 ✅ Pipeline Execution Complete!
 ==================================================
-
+```
 ## Testing
 
 Run the test suite to verify ingestion mocks, PyArrow storage partitions, and DuckDB analytics queries:
@@ -108,6 +108,7 @@ python -m pytest
 ```
 
 ## Repository Structure
+```text
 flight-analytics-lakehouse/
 ├── data/
 │   ├── raw/                # Raw downloaded BTS zip archives
@@ -124,3 +125,4 @@ flight-analytics-lakehouse/
 ├── main.py                 # CLI orchestrator
 ├── pyproject.toml          # Editable package configuration & dependencies
 └── README.md
+```
