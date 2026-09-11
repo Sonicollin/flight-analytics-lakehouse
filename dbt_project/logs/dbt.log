@@ -1388,3 +1388,278 @@ _duckdb.IOException: IO Error: Cannot open file "C:\Users\yabu01-82403ierunway\�
 [0m16:57:17.091552 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000229CDAAE820>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000229D1522450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000229D1522390>]}
 [0m16:57:17.091984 [debug] [MainThread]: Flushing usage events
 [0m16:57:17.998413 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:03:16.496188 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000222833A6BA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022280E56C10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022285DC79D0>]}
+
+
+============================== 17:03:16.502229 | f1c7dfd1-c0ff-4e5a-b5fd-2f984bdf64cc ==============================
+[0m17:03:16.502229 [info ] [MainThread]: Running with dbt=1.12.4
+[0m17:03:16.503220 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'static_parser': 'True', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\yabu01-82403ierunway\\新しいフォルダー\\flight-analytics-lakehouse\\dbt_project', 'invocation_command': 'dbt run --profiles-dir C:\\Users\\yabu01-82403ierunway\\新しいフォルダー\\flight-analytics-lakehouse\\dbt_project --project-dir C:\\Users\\yabu01-82403ierunway\\新しいフォルダー\\flight-analytics-lakehouse\\dbt_project', 'hints_enabled': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'use_colors': 'True', 'log_path': 'C:\\Users\\yabu01-82403ierunway\\新しいフォルダー\\flight-analytics-lakehouse\\dbt_project\\logs'}
+[0m17:03:16.860447 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f1c7dfd1-c0ff-4e5a-b5fd-2f984bdf64cc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022285E9A9E0>]}
+[0m17:03:16.978190 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f1c7dfd1-c0ff-4e5a-b5fd-2f984bdf64cc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022285B8F020>]}
+[0m17:03:16.980891 [info ] [MainThread]: Registered adapter: duckdb=1.11.0
+[0m17:03:17.327882 [debug] [MainThread]: checksum: dfa98aa6599678cb5e51de9fac4ca9735c7b94a07e1a525fd3802eb04e736270, vars: {}, profile: flight_lakehouse, target: dev, version: 1.12.4
+[0m17:03:17.450424 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m17:03:17.451033 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'f1c7dfd1-c0ff-4e5a-b5fd-2f984bdf64cc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022287A01350>]}
+[0m17:03:19.144151 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'f1c7dfd1-c0ff-4e5a-b5fd-2f984bdf64cc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022287D35D60>]}
+[0m17:03:19.233105 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\dbt_project\target\manifest.json
+[0m17:03:19.236503 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\dbt_project\target\semantic_manifest.json
+[0m17:03:19.261964 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\dbt_project\target\osi_document.json
+[0m17:03:19.274342 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'f1c7dfd1-c0ff-4e5a-b5fd-2f984bdf64cc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022288004590>]}
+[0m17:03:19.274821 [info ] [MainThread]: Found 3 models, 7 data tests, 500 macros
+[0m17:03:19.275373 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f1c7dfd1-c0ff-4e5a-b5fd-2f984bdf64cc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000222879FB380>]}
+[0m17:03:19.277580 [info ] [MainThread]: 
+[0m17:03:19.278126 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m17:03:19.278574 [info ] [MainThread]: 
+[0m17:03:19.279198 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m17:03:19.285586 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_lakehouse'
+[0m17:03:19.374964 [debug] [ThreadPool]: Using duckdb connection "list_lakehouse"
+[0m17:03:19.375367 [debug] [ThreadPool]: On list_lakehouse: /* {"app": "dbt", "dbt_version": "1.12.4", "profile_name": "flight_lakehouse", "target_name": "dev", "connection_name": "list_lakehouse"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"lakehouse"'
+    
+  
+  
+[0m17:03:19.375665 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:03:19.410780 [debug] [ThreadPool]: SQL status: OK in 0.035 seconds
+[0m17:03:19.411913 [debug] [ThreadPool]: On list_lakehouse: Close
+[0m17:03:19.412602 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_lakehouse, now create_lakehouse_main)
+[0m17:03:19.413558 [debug] [ThreadPool]: Creating schema "database: "lakehouse"
+schema: "main"
+"
+[0m17:03:19.421412 [debug] [ThreadPool]: Using duckdb connection "create_lakehouse_main"
+[0m17:03:19.421819 [debug] [ThreadPool]: On create_lakehouse_main: /* {"app": "dbt", "dbt_version": "1.12.4", "profile_name": "flight_lakehouse", "target_name": "dev", "connection_name": "create_lakehouse_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='lakehouse'
+        and type != 'duckdb'
+    
+  
+[0m17:03:19.422115 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:03:19.425099 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m17:03:19.426145 [debug] [ThreadPool]: Using duckdb connection "create_lakehouse_main"
+[0m17:03:19.426437 [debug] [ThreadPool]: On create_lakehouse_main: BEGIN
+[0m17:03:19.426961 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m17:03:19.427255 [debug] [ThreadPool]: Using duckdb connection "create_lakehouse_main"
+[0m17:03:19.427500 [debug] [ThreadPool]: On create_lakehouse_main: /* {"app": "dbt", "dbt_version": "1.12.4", "profile_name": "flight_lakehouse", "target_name": "dev", "connection_name": "create_lakehouse_main"} */
+
+    
+    
+        create schema if not exists "lakehouse"."main"
+    
+[0m17:03:19.430127 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m17:03:19.430949 [debug] [ThreadPool]: On create_lakehouse_main: COMMIT
+[0m17:03:19.431327 [debug] [ThreadPool]: Using duckdb connection "create_lakehouse_main"
+[0m17:03:19.431635 [debug] [ThreadPool]: On create_lakehouse_main: COMMIT
+[0m17:03:19.432155 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m17:03:19.432459 [debug] [ThreadPool]: On create_lakehouse_main: Close
+[0m17:03:19.434435 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_lakehouse_main'
+[0m17:03:19.439100 [debug] [ThreadPool]: Using duckdb connection "list_lakehouse_main"
+[0m17:03:19.439441 [debug] [ThreadPool]: On list_lakehouse_main: BEGIN
+[0m17:03:19.439707 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:03:19.440296 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m17:03:19.440564 [debug] [ThreadPool]: Using duckdb connection "list_lakehouse_main"
+[0m17:03:19.440826 [debug] [ThreadPool]: On list_lakehouse_main: /* {"app": "dbt", "dbt_version": "1.12.4", "profile_name": "flight_lakehouse", "target_name": "dev", "connection_name": "list_lakehouse_main"} */
+select
+      'lakehouse' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'lakehouse'
+  
+[0m17:03:19.451571 [debug] [ThreadPool]: SQL status: OK in 0.010 seconds
+[0m17:03:19.452752 [debug] [ThreadPool]: On list_lakehouse_main: ROLLBACK
+[0m17:03:19.453336 [debug] [ThreadPool]: On list_lakehouse_main: Close
+[0m17:03:19.454758 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'f1c7dfd1-c0ff-4e5a-b5fd-2f984bdf64cc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022287ECFC50>]}
+[0m17:03:19.455189 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:03:19.455454 [debug] [MainThread]: On master: BEGIN
+[0m17:03:19.455683 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:03:19.456207 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m17:03:19.456465 [debug] [MainThread]: On master: COMMIT
+[0m17:03:19.456698 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:03:19.456923 [debug] [MainThread]: On master: COMMIT
+[0m17:03:19.457352 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m17:03:19.457613 [debug] [MainThread]: On master: Close
+[0m17:03:19.465193 [debug] [Thread-2 (]: Began running node model.flight_lakehouse.stg_opensky_states
+[0m17:03:19.466132 [debug] [Thread-1 (]: Began running node model.flight_lakehouse.stg_bts_flights
+[0m17:03:19.465733 [info ] [Thread-2 (]: 2 of 3 START sql view model main.stg_opensky_states ............................ [RUN]
+[0m17:03:19.467450 [debug] [Thread-2 (]: Acquiring new duckdb connection 'model.flight_lakehouse.stg_opensky_states'
+[0m17:03:19.468042 [debug] [Thread-2 (]: Began compiling node model.flight_lakehouse.stg_opensky_states
+[0m17:03:19.473022 [debug] [Thread-2 (]: Writing injected SQL for node "model.flight_lakehouse.stg_opensky_states"
+[0m17:03:19.466801 [info ] [Thread-1 (]: 1 of 3 START sql view model main.stg_bts_flights ............................... [RUN]
+[0m17:03:19.473770 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.flight_lakehouse.stg_bts_flights'
+[0m17:03:19.474168 [debug] [Thread-1 (]: Began compiling node model.flight_lakehouse.stg_bts_flights
+[0m17:03:19.474995 [debug] [Thread-1 (]: Writing injected SQL for node "model.flight_lakehouse.stg_bts_flights"
+[0m17:03:19.477890 [debug] [Thread-2 (]: Began executing node model.flight_lakehouse.stg_opensky_states
+[0m17:03:19.478666 [debug] [Thread-1 (]: Began executing node model.flight_lakehouse.stg_bts_flights
+[0m17:03:19.514763 [debug] [Thread-2 (]: Writing runtime sql for node "model.flight_lakehouse.stg_opensky_states"
+[0m17:03:19.516474 [debug] [Thread-1 (]: Writing runtime sql for node "model.flight_lakehouse.stg_bts_flights"
+[0m17:03:19.519236 [debug] [Thread-2 (]: Using duckdb connection "model.flight_lakehouse.stg_opensky_states"
+[0m17:03:19.519732 [debug] [Thread-2 (]: On model.flight_lakehouse.stg_opensky_states: BEGIN
+[0m17:03:19.520081 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m17:03:19.520889 [debug] [Thread-1 (]: Using duckdb connection "model.flight_lakehouse.stg_bts_flights"
+[0m17:03:19.521250 [debug] [Thread-1 (]: On model.flight_lakehouse.stg_bts_flights: BEGIN
+[0m17:03:19.521546 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m17:03:19.522048 [debug] [Thread-2 (]: SQL status: OK in 0.002 seconds
+[0m17:03:19.522397 [debug] [Thread-2 (]: Using duckdb connection "model.flight_lakehouse.stg_opensky_states"
+[0m17:03:19.522710 [debug] [Thread-2 (]: On model.flight_lakehouse.stg_opensky_states: /* {"app": "dbt", "dbt_version": "1.12.4", "profile_name": "flight_lakehouse", "target_name": "dev", "node_id": "model.flight_lakehouse.stg_opensky_states"} */
+
+  
+  create view "lakehouse"."main"."stg_opensky_states__dbt_tmp" as (
+    SELECT
+    to_timestamp(snapshot_time) AS snapshot_timestamp,
+    icao24,
+    TRIM(callsign) AS callsign,
+    origin_country,
+    to_timestamp(time_position) AS position_timestamp,
+    to_timestamp(last_contact) AS last_contact_timestamp,
+    longitude,
+    latitude,
+    baro_altitude,
+    on_ground,
+    velocity,
+    true_track,
+    vertical_rate
+FROM main.raw_opensky_states
+  );
+
+[0m17:03:19.523232 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m17:03:19.523596 [debug] [Thread-1 (]: Using duckdb connection "model.flight_lakehouse.stg_bts_flights"
+[0m17:03:19.523956 [debug] [Thread-1 (]: On model.flight_lakehouse.stg_bts_flights: /* {"app": "dbt", "dbt_version": "1.12.4", "profile_name": "flight_lakehouse", "target_name": "dev", "node_id": "model.flight_lakehouse.stg_bts_flights"} */
+
+  
+  create view "lakehouse"."main"."stg_bts_flights__dbt_tmp" as (
+    WITH raw_parquet AS (
+    SELECT *
+    FROM read_parquet('../data/processed/**/*.parquet', hive_partitioning=true)
+)
+SELECT
+    year,
+    month,
+    day,
+    flight_date,
+    carrier,
+    origin,
+    dest,
+    dep_delay,
+    arr_delay,
+    air_time,
+    distance,
+    CASE WHEN arr_delay > 15 THEN TRUE ELSE FALSE END AS is_delayed
+FROM raw_parquet
+  );
+
+[0m17:03:19.524663 [debug] [Thread-2 (]: SQL status: OK in 0.002 seconds
+[0m17:03:19.531711 [debug] [Thread-2 (]: Using duckdb connection "model.flight_lakehouse.stg_opensky_states"
+[0m17:03:19.532175 [debug] [Thread-2 (]: On model.flight_lakehouse.stg_opensky_states: /* {"app": "dbt", "dbt_version": "1.12.4", "profile_name": "flight_lakehouse", "target_name": "dev", "node_id": "model.flight_lakehouse.stg_opensky_states"} */
+alter view "lakehouse"."main"."stg_opensky_states__dbt_tmp" rename to "stg_opensky_states"
+[0m17:03:19.532715 [debug] [Thread-1 (]: DuckDB adapter: duckdb error: IO Error: No files found that match the pattern "../data/processed/**/*.parquet"
+
+LINE 7:     FROM read_parquet('../data/processed/**/*.parquet', hive_partiti...
+                 ^
+[0m17:03:19.533839 [debug] [Thread-1 (]: DuckDB adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.12.4", "profile_name": "flight_lakehouse", "target_name": "dev", "node_id": "model.flight_lakehouse.stg_bts_flights"} */
+
+  
+  create view "lakehouse"."main"."stg_bts_flights__dbt_tmp" as (
+    WITH raw_parquet AS (
+    SELECT *
+    FROM read_parquet('../data/processed/**/*.parquet', hive_partitioning=true)
+)
+SELECT
+    year,
+    month,
+    day,
+    flight_date,
+    carrier,
+    origin,
+    dest,
+    dep_delay,
+    arr_delay,
+    air_time,
+    distance,
+    CASE WHEN arr_delay > 15 THEN TRUE ELSE FALSE END AS is_delayed
+FROM raw_parquet
+  );
+
+[0m17:03:19.534483 [debug] [Thread-1 (]: DuckDB adapter: Rolling back transaction.
+[0m17:03:19.534855 [debug] [Thread-1 (]: On model.flight_lakehouse.stg_bts_flights: ROLLBACK
+[0m17:03:19.535284 [debug] [Thread-2 (]: SQL status: OK in 0.002 seconds
+[0m17:03:19.546453 [debug] [Thread-2 (]: On model.flight_lakehouse.stg_opensky_states: COMMIT
+[0m17:03:19.546919 [debug] [Thread-2 (]: Using duckdb connection "model.flight_lakehouse.stg_opensky_states"
+[0m17:03:19.547245 [debug] [Thread-2 (]: On model.flight_lakehouse.stg_opensky_states: COMMIT
+[0m17:03:19.547962 [debug] [Thread-1 (]: On model.flight_lakehouse.stg_bts_flights: Close
+[0m17:03:19.551931 [debug] [Thread-2 (]: SQL status: OK in 0.004 seconds
+[0m17:03:19.556769 [debug] [Thread-2 (]: Using duckdb connection "model.flight_lakehouse.stg_opensky_states"
+[0m17:03:19.557192 [debug] [Thread-2 (]: On model.flight_lakehouse.stg_opensky_states: /* {"app": "dbt", "dbt_version": "1.12.4", "profile_name": "flight_lakehouse", "target_name": "dev", "node_id": "model.flight_lakehouse.stg_opensky_states"} */
+
+      drop view if exists "lakehouse"."main"."stg_opensky_states__dbt_backup" cascade
+    
+[0m17:03:19.558122 [debug] [Thread-2 (]: SQL status: OK in 0.001 seconds
+[0m17:03:19.560226 [debug] [Thread-2 (]: On model.flight_lakehouse.stg_opensky_states: Close
+[0m17:03:19.563039 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f1c7dfd1-c0ff-4e5a-b5fd-2f984bdf64cc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000222838CDE90>]}
+[0m17:03:19.563653 [info ] [Thread-2 (]: 2 of 3 OK created sql view model main.stg_opensky_states ....................... [[32mOK[0m in 0.09s]
+[0m17:03:19.564479 [debug] [Thread-2 (]: Finished running node model.flight_lakehouse.stg_opensky_states
+[0m17:03:19.570617 [debug] [Thread-1 (]: Runtime Error in model stg_bts_flights (models\staging\stg_bts_flights.sql)
+  IO Error: No files found that match the pattern "../data/processed/**/*.parquet"
+  
+  LINE 7:     FROM read_parquet('../data/processed/**/*.parquet', hive_partiti...
+                   ^
+[0m17:03:19.571137 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'f1c7dfd1-c0ff-4e5a-b5fd-2f984bdf64cc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002228837A210>]}
+[0m17:03:19.571718 [error] [Thread-1 (]: 1 of 3 ERROR creating sql view model main.stg_bts_flights ...................... [[31mERROR[0m in 0.10s]
+[0m17:03:19.572464 [debug] [Thread-1 (]: Finished running node model.flight_lakehouse.stg_bts_flights
+[0m17:03:19.573264 [debug] [Thread-7 (]: Marking all children of 'model.flight_lakehouse.stg_bts_flights' to be skipped because of status 'error'.  Reason: Runtime Error in model stg_bts_flights (models\staging\stg_bts_flights.sql)
+  IO Error: No files found that match the pattern "../data/processed/**/*.parquet"
+  
+  LINE 7:     FROM read_parquet('../data/processed/**/*.parquet', hive_partiti...
+                   ^.
+[0m17:03:19.576115 [debug] [Thread-3 (]: Began running node model.flight_lakehouse.int_carrier_realtime_metrics
+[0m17:03:19.576645 [info ] [Thread-3 (]: 3 of 3 SKIP relation main.int_carrier_realtime_metrics ......................... [[33mSKIP[0m]
+[0m17:03:19.577214 [debug] [Thread-3 (]: Finished running node model.flight_lakehouse.int_carrier_realtime_metrics
+[0m17:03:19.579109 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:03:19.579719 [debug] [MainThread]: On master: BEGIN
+[0m17:03:19.580319 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m17:03:19.581273 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m17:03:19.582405 [debug] [MainThread]: On master: COMMIT
+[0m17:03:19.582755 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:03:19.583023 [debug] [MainThread]: On master: COMMIT
+[0m17:03:19.583663 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m17:03:19.584109 [debug] [MainThread]: On master: Close
+[0m17:03:19.584659 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:03:19.584933 [debug] [MainThread]: Connection 'create_lakehouse_main' was properly closed.
+[0m17:03:19.585175 [debug] [MainThread]: Connection 'list_lakehouse_main' was properly closed.
+[0m17:03:19.585408 [debug] [MainThread]: Connection 'model.flight_lakehouse.stg_opensky_states' was properly closed.
+[0m17:03:19.585659 [debug] [MainThread]: Connection 'model.flight_lakehouse.stg_bts_flights' was properly closed.
+[0m17:03:19.586004 [info ] [MainThread]: 
+[0m17:03:19.586461 [info ] [MainThread]: Finished running 1 table model, 2 view models in 0 hours 0 minutes and 0.31 seconds (0.31s).
+[0m17:03:19.587611 [debug] [MainThread]: Command end result
+[0m17:03:19.645561 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\dbt_project\target\manifest.json
+[0m17:03:19.655297 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\dbt_project\target\semantic_manifest.json
+[0m17:03:19.663539 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\dbt_project\target\osi_document.json
+[0m17:03:19.679666 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\dbt_project\target\run_results.json
+[0m17:03:19.680319 [info ] [MainThread]: 
+[0m17:03:19.683790 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m17:03:19.684601 [info ] [MainThread]: 
+[0m17:03:19.685333 [error] [MainThread]: [[31mERROR[0m]: in model stg_bts_flights (models\staging\stg_bts_flights.sql)
+[0m17:03:19.685892 [error] [MainThread]:   Runtime Error in model stg_bts_flights (models\staging\stg_bts_flights.sql)
+  IO Error: No files found that match the pattern "../data/processed/**/*.parquet"
+  
+  LINE 7:     FROM read_parquet('../data/processed/**/*.parquet', hive_partiti...
+                   ^
+[0m17:03:19.686354 [info ] [MainThread]: 
+[0m17:03:19.686973 [info ] [MainThread]:   compiled code at target\compiled\flight_lakehouse\models\staging\stg_bts_flights.sql
+[0m17:03:19.687386 [info ] [MainThread]: 
+[0m17:03:19.687823 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=1 SKIP=1 NO-OP=0 REUSED=0 TOTAL=3
+[0m17:03:19.689326 [debug] [MainThread]: Command `dbt run` failed at 17:03:19.689177 after 3.45 seconds
+[0m17:03:19.689773 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002228802D0D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000222838D3F50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022285E50EC0>]}
+[0m17:03:19.690335 [debug] [MainThread]: Flushing usage events
+[0m17:03:20.604303 [debug] [MainThread]: An error was encountered while trying to flush usage events
