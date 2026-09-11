@@ -1,4 +1,4 @@
-WITH raq_parquet AS (
+WITH raw_parquet AS (
     SELECT *
     FROM read_parquet('../data/processed/**/*.parquet', hive_partitioning=true)
 )

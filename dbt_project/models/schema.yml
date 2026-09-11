@@ -1,0 +1,39 @@
+version: 2
+
+models:
+  - name: stg_bts_flights
+    description: "Staging view over Hive-partitioned historical BTS flight delay Parquet archives."
+    columns:
+      - name: flight_date
+        description: "Date of flight departure."
+        tests:
+          - not_null
+      - name: carrier
+        description: "Reporting carrier code (e.g., AA, DL, UA)."
+        tests:
+          - not_null
+
+  - name: stg_opensky_states
+    description: "Staging view over contract-validated live OpenSky state vectors stored in DuckDB."
+    columns:
+      - name: icao24
+        description: "24-bit ICAO transponder hex address."
+        tests:
+          - not_null
+      - name: snapshot_timestamp
+        description: "Normalized timestamp of state vector fetch."
+        tests:
+          - not_null
+
+  - name: int_carrier_realtime_metrics
+    description: "Intermediate table aggregating historical carrier metrics via Polars Python transformation."
+    columns:
+      - name: carrier
+        description: "Unique reporting airline carrier identifier."
+        tests:
+          - not_null
+          - unique
+      - name: total_historical_flights
+        description: "Count of processed historical flights."
+        tests:
+          - not_null
