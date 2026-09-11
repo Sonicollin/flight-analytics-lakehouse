@@ -3,5 +3,5 @@ flight_lakehouse:
   outputs:
     dev:
       type: duckdb
-      path: "../data/lakehouse.duckdb"
+      path: "../data/processed/lakehouse.duckdb"
       threads: 4

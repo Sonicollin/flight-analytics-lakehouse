@@ -1,0 +1,1390 @@
+[0m16:30:36.675758 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022074E66BA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002207291AC10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000220778879D0>]}
+
+
+============================== 16:30:36.679538 | f638e99e-6a4d-4401-a19a-70ba41992df5 ==============================
+[0m16:30:36.679538 [info ] [MainThread]: Running with dbt=1.12.4
+[0m16:30:36.680348 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'static_parser': 'True', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\yabu01-82403ierunway\\新しいフォルダー\\flight-analytics-lakehouse\\dbt_project', 'use_colors': 'True', 'hints_enabled': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'invocation_command': 'dbt run --profiles-dir C:\\Users\\yabu01-82403ierunway\\新しいフォルダー\\flight-analytics-lakehouse\\dbt_project --project-dir C:\\Users\\yabu01-82403ierunway\\新しいフォルダー\\flight-analytics-lakehouse\\dbt_project', 'log_path': 'C:\\Users\\yabu01-82403ierunway\\新しいフォルダー\\flight-analytics-lakehouse\\dbt_project\\logs'}
+[0m16:30:37.106301 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'f638e99e-6a4d-4401-a19a-70ba41992df5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002207795A9E0>]}
+[0m16:30:37.247539 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'f638e99e-6a4d-4401-a19a-70ba41992df5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002207764F020>]}
+[0m16:30:37.252063 [info ] [MainThread]: Registered adapter: duckdb=1.11.0
+[0m16:30:37.649156 [debug] [MainThread]: checksum: dfa98aa6599678cb5e51de9fac4ca9735c7b94a07e1a525fd3802eb04e736270, vars: {}, profile: flight_lakehouse, target: dev, version: 1.12.4
+[0m16:30:37.650367 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m16:30:37.651095 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'f638e99e-6a4d-4401-a19a-70ba41992df5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000220779DDB50>]}
+[0m16:30:39.186171 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Parsing Error
+  Error when trying to literal_eval an arg to dbt.ref(), dbt.source(), dbt.config() or dbt.config.get() 
+  malformed node or string on line 9: Name(id='model_name', ctx=Load())
+  https://docs.python.org/3/library/ast.html#ast.literal_eval
+  In dbt python model, `dbt.ref`, `dbt.source`, `dbt.config`, `dbt.config.get` function args only support Python literal structures
+[0m16:30:39.187737 [debug] [MainThread]: Command `dbt run` failed at 16:30:39.187595 after 2.76 seconds
+[0m16:30:39.188272 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000220795373E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000220795372F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000220777B98D0>]}
+[0m16:30:39.188687 [debug] [MainThread]: Flushing usage events
+[0m16:30:40.109460 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:38:30.992651 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001949FB26BA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001949D5D6C10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000194A25479D0>]}
+
+
+============================== 16:38:30.996363 | 59532334-8254-4eb8-8e7e-fc9acca333c3 ==============================
+[0m16:38:30.996363 [info ] [MainThread]: Running with dbt=1.12.4
+[0m16:38:30.997249 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'maximum_seed_size_mib': '1', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\yabu01-82403ierunway\\新しいフォルダー\\flight-analytics-lakehouse\\dbt_project', 'indirect_selection': 'eager', 'hints_enabled': 'True', 'invocation_command': 'dbt run --profiles-dir C:\\Users\\yabu01-82403ierunway\\新しいフォルダー\\flight-analytics-lakehouse\\dbt_project --project-dir C:\\Users\\yabu01-82403ierunway\\新しいフォルダー\\flight-analytics-lakehouse\\dbt_project', 'use_experimental_parser': 'False', 'use_colors': 'True', 'log_path': 'C:\\Users\\yabu01-82403ierunway\\新しいフォルダー\\flight-analytics-lakehouse\\dbt_project\\logs'}
+[0m16:38:31.361790 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '59532334-8254-4eb8-8e7e-fc9acca333c3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000194A261A9E0>]}
+[0m16:38:31.492808 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '59532334-8254-4eb8-8e7e-fc9acca333c3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000194A230F020>]}
+[0m16:38:31.495627 [info ] [MainThread]: Registered adapter: duckdb=1.11.0
+[0m16:38:31.834766 [debug] [MainThread]: checksum: dfa98aa6599678cb5e51de9fac4ca9735c7b94a07e1a525fd3802eb04e736270, vars: {}, profile: flight_lakehouse, target: dev, version: 1.12.4
+[0m16:38:31.836216 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m16:38:31.836977 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '59532334-8254-4eb8-8e7e-fc9acca333c3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000194A269DB50>]}
+[0m16:38:33.629041 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '59532334-8254-4eb8-8e7e-fc9acca333c3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000194A2FC3C50>]}
+[0m16:38:33.731512 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\dbt_project\target\manifest.json
+[0m16:38:33.746299 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\dbt_project\target\semantic_manifest.json
+[0m16:38:33.785531 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\dbt_project\target\osi_document.json
+[0m16:38:33.806246 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '59532334-8254-4eb8-8e7e-fc9acca333c3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000194A454EDD0>]}
+[0m16:38:33.806754 [info ] [MainThread]: Found 3 models, 7 data tests, 500 macros
+[0m16:38:33.807283 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '59532334-8254-4eb8-8e7e-fc9acca333c3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000194A4651B20>]}
+[0m16:38:33.809693 [info ] [MainThread]: 
+[0m16:38:33.810148 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m16:38:33.810635 [info ] [MainThread]: 
+[0m16:38:33.811230 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m16:38:33.818530 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_lakehouse'
+[0m16:38:34.041269 [debug] [ThreadPool]: Using duckdb connection "list_lakehouse"
+[0m16:38:34.041682 [debug] [ThreadPool]: On list_lakehouse: /* {"app": "dbt", "dbt_version": "1.12.4", "profile_name": "flight_lakehouse", "target_name": "dev", "connection_name": "list_lakehouse"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"lakehouse"'
+    
+  
+  
+[0m16:38:34.041979 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:38:34.061645 [debug] [ThreadPool]: DuckDB adapter: duckdb error: IO Error: Cannot open file "C:\Users\yabu01-82403ierunway\新しいフォルダー\data\lakehouse.duckdb": 指定されたパスが見つかりません。
+
+[0m16:38:34.062085 [debug] [ThreadPool]: DuckDB adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.12.4", "profile_name": "flight_lakehouse", "target_name": "dev", "connection_name": "list_lakehouse"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"lakehouse"'
+    
+  
+  
+[0m16:38:34.062379 [debug] [ThreadPool]: DuckDB adapter: Rolling back transaction.
+[0m16:38:34.062648 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:38:34.077213 [debug] [ThreadPool]: DuckDB adapter: duckdb error: IO Error: Cannot open file "C:\Users\yabu01-82403ierunway\新しいフォルダー\data\lakehouse.duckdb": 指定されたパスが見つかりません。
+
+[0m16:38:34.077650 [debug] [ThreadPool]: DuckDB adapter: Error running SQL: macro list_schemas
+[0m16:38:34.077929 [debug] [ThreadPool]: DuckDB adapter: Rolling back transaction.
+[0m16:38:34.078200 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:38:34.093685 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:38:34.094071 [debug] [MainThread]: Connection 'list_lakehouse' was properly closed.
+[0m16:38:34.094371 [info ] [MainThread]: 
+[0m16:38:34.094802 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 0.28 seconds (0.28s).
+[0m16:38:34.095372 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+IO Error: Cannot open file "C:\Users\yabu01-82403ierunway\新しいフォルダー\data\lakehouse.duckdb": 指定されたパスが見つかりません。
+
+[0m16:38:34.129532 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\connections.py", line 110, in exception_handler
+    yield
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\sql\connections.py", line 147, in add_query
+    cursor = connection.handle.cursor()
+             ^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\contracts\connection.py", line 96, in handle
+    self._handle.resolve(self)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\contracts\connection.py", line 120, in resolve
+    return self.opener(connection)
+           ~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\connections.py", line 68, in open
+    connection.handle = cls._ENV.handle()
+                        ~~~~~~~~~~~~~~~^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\environments\local.py", line 79, in handle
+    self.conn = self.initialize_db(self.creds, self._plugins)
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\environments\__init__.py", line 164, in initialize_db
+    conn = duckdb.connect(creds.path, read_only=False, config=config)
+_duckdb.IOException: IO Error: Cannot open file "C:\Users\yabu01-82403ierunway\新しいフォルダー\data\lakehouse.duckdb": 指定されたパスが見つかりません。
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\connections.py", line 110, in exception_handler
+    yield
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\base\impl.py", line 1372, in execute_macro
+    result = macro_function(**kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt_common\clients\jinja.py", line 427, in __call__
+    return self.call_macro(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt_common\clients\jinja.py", line 395, in call_macro
+    return macro(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 770, in __call__
+    return self._invoke(arguments, autoescape)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 784, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 20, in macro
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\sandbox.py", line 401, in call
+    return __context.call(__obj, *args, **kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 303, in call
+    return __obj(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\clients\jinja.py", line 151, in __call__
+    return self.call_macro(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt_common\clients\jinja.py", line 395, in call_macro
+    return macro(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 770, in __call__
+    return self._invoke(arguments, autoescape)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 784, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 50, in macro
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\sandbox.py", line 401, in call
+    return __context.call(__obj, *args, **kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 303, in call
+    return __obj(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\clients\jinja.py", line 151, in __call__
+    return self.call_macro(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt_common\clients\jinja.py", line 395, in call_macro
+    return macro(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 770, in __call__
+    return self._invoke(arguments, autoescape)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 784, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 33, in macro
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\sandbox.py", line 401, in call
+    return __context.call(__obj, *args, **kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 303, in call
+    return __obj(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\clients\jinja.py", line 151, in __call__
+    return self.call_macro(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt_common\clients\jinja.py", line 395, in call_macro
+    return macro(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 770, in __call__
+    return self._invoke(arguments, autoescape)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 784, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 52, in macro
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\sandbox.py", line 401, in call
+    return __context.call(__obj, *args, **kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 303, in call
+    return __obj(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt_common\record.py", line 538, in record_replay_wrapper
+    return func_to_record(*call_args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\base\impl.py", line 523, in execute
+    return self.connections.execute(sql=sql, auto_begin=auto_begin, fetch=fetch, limit=limit)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\connections.py", line 145, in execute
+    return super().execute(sql, auto_begin, fetch, limit)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\sql\connections.py", line 219, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+                ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\sql\connections.py", line 131, in add_query
+    with self.exception_handler(sql):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\yabu01-82403ierunway\AppData\Local\Python\pythoncore-3.14-64\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\connections.py", line 117, in exception_handler
+    self.rollback_if_open()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\base\connections.py", line 125, in rollback_if_open
+    if conn is not None and conn.handle and conn.transaction_open:
+                            ^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\contracts\connection.py", line 96, in handle
+    self._handle.resolve(self)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\contracts\connection.py", line 120, in resolve
+    return self.opener(connection)
+           ~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\connections.py", line 68, in open
+    connection.handle = cls._ENV.handle()
+                        ~~~~~~~~~~~~~~~^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\environments\local.py", line 79, in handle
+    self.conn = self.initialize_db(self.creds, self._plugins)
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\environments\__init__.py", line 164, in initialize_db
+    conn = duckdb.connect(creds.path, read_only=False, config=config)
+_duckdb.IOException: IO Error: Cannot open file "C:\Users\yabu01-82403ierunway\新しいフォルダー\data\lakehouse.duckdb": 指定されたパスが見つかりません。
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\cli\requires.py", line 198, in wrapper
+    result, success = func(*args, **kwargs)
+                      ~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\cli\requires.py", line 144, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\cli\requires.py", line 295, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\cli\requires.py", line 340, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\cli\requires.py", line 387, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\cli\requires.py", line 404, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\cli\main.py", line 609, in run
+    results = task.run()
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\task\runnable.py", line 775, in run
+    result = self.execute_with_hooks(selected_uids)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\task\runnable.py", line 701, in execute_with_hooks
+    before_run_status = self.before_run(adapter, selected_uids)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\task\run.py", line 1313, in before_run
+    self.create_schemas(adapter, required_schemas)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\task\runnable.py", line 883, in create_schemas
+    existing_schemas_lowered.update(ls_future.result())
+                                    ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\yabu01-82403ierunway\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\_base.py", line 447, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\yabu01-82403ierunway\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\_base.py", line 396, in __get_result
+    raise self._exception
+  File "C:\Users\yabu01-82403ierunway\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Users\yabu01-82403ierunway\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt_common\utils\executor.py", line 20, in connected
+    return func(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\task\runnable.py", line 858, in list_schemas
+    for s in adapter.list_schemas(database_quoted)
+             ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\sql\impl.py", line 219, in list_schemas
+    results = self.execute_macro(LIST_SCHEMAS_MACRO_NAME, kwargs={"database": database})
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\base\impl.py", line 1371, in execute_macro
+    with self.connections.exception_handler(f"macro {macro_name}"):
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\AppData\Local\Python\pythoncore-3.14-64\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\connections.py", line 117, in exception_handler
+    self.rollback_if_open()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\base\connections.py", line 125, in rollback_if_open
+    if conn is not None and conn.handle and conn.transaction_open:
+                            ^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\contracts\connection.py", line 96, in handle
+    self._handle.resolve(self)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\contracts\connection.py", line 120, in resolve
+    return self.opener(connection)
+           ~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\connections.py", line 68, in open
+    connection.handle = cls._ENV.handle()
+                        ~~~~~~~~~~~~~~~^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\environments\local.py", line 79, in handle
+    self.conn = self.initialize_db(self.creds, self._plugins)
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\environments\__init__.py", line 164, in initialize_db
+    conn = duckdb.connect(creds.path, read_only=False, config=config)
+_duckdb.IOException: IO Error: Cannot open file "C:\Users\yabu01-82403ierunway\新しいフォルダー\data\lakehouse.duckdb": 指定されたパスが見つかりません。
+
+
+[0m16:38:34.132536 [debug] [MainThread]: Command `dbt run` failed at 16:38:34.132313 after 3.38 seconds
+[0m16:38:34.133032 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000194A49381D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000194A483E780>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000194A483EAF0>]}
+[0m16:38:34.133419 [debug] [MainThread]: Flushing usage events
+[0m16:38:35.040718 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:48:47.023276 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F82C3A6BA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F829E4AC10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F82EDC79D0>]}
+
+
+============================== 16:48:47.026943 | b3b50160-e47f-44e9-9171-e2cd8b24239f ==============================
+[0m16:48:47.026943 [info ] [MainThread]: Running with dbt=1.12.4
+[0m16:48:47.027667 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'version_check': 'True', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\yabu01-82403ierunway\\新しいフォルダー\\flight-analytics-lakehouse\\dbt_project', 'indirect_selection': 'eager', 'hints_enabled': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'invocation_command': 'dbt run --profiles-dir C:\\Users\\yabu01-82403ierunway\\新しいフォルダー\\flight-analytics-lakehouse\\dbt_project --project-dir C:\\Users\\yabu01-82403ierunway\\新しいフォルダー\\flight-analytics-lakehouse\\dbt_project', 'log_path': 'C:\\Users\\yabu01-82403ierunway\\新しいフォルダー\\flight-analytics-lakehouse\\dbt_project\\logs'}
+[0m16:48:47.374379 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b3b50160-e47f-44e9-9171-e2cd8b24239f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F82EE9A9E0>]}
+[0m16:48:47.479685 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'b3b50160-e47f-44e9-9171-e2cd8b24239f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F82EB8F020>]}
+[0m16:48:47.482304 [info ] [MainThread]: Registered adapter: duckdb=1.11.0
+[0m16:48:47.792157 [debug] [MainThread]: checksum: dfa98aa6599678cb5e51de9fac4ca9735c7b94a07e1a525fd3802eb04e736270, vars: {}, profile: flight_lakehouse, target: dev, version: 1.12.4
+[0m16:48:47.911914 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+[0m16:48:47.912517 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'b3b50160-e47f-44e9-9171-e2cd8b24239f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F830985250>]}
+[0m16:48:49.592298 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b3b50160-e47f-44e9-9171-e2cd8b24239f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F830CADD60>]}
+[0m16:48:49.681589 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\dbt_project\target\manifest.json
+[0m16:48:49.686738 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\dbt_project\target\semantic_manifest.json
+[0m16:48:49.709477 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\dbt_project\target\osi_document.json
+[0m16:48:49.722664 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b3b50160-e47f-44e9-9171-e2cd8b24239f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F830F884B0>]}
+[0m16:48:49.723193 [info ] [MainThread]: Found 3 models, 7 data tests, 500 macros
+[0m16:48:49.723732 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b3b50160-e47f-44e9-9171-e2cd8b24239f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F83097B380>]}
+[0m16:48:49.726414 [info ] [MainThread]: 
+[0m16:48:49.726868 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m16:48:49.727276 [info ] [MainThread]: 
+[0m16:48:49.727830 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m16:48:49.733537 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_lakehouse'
+[0m16:48:49.820667 [debug] [ThreadPool]: Using duckdb connection "list_lakehouse"
+[0m16:48:49.821055 [debug] [ThreadPool]: On list_lakehouse: /* {"app": "dbt", "dbt_version": "1.12.4", "profile_name": "flight_lakehouse", "target_name": "dev", "connection_name": "list_lakehouse"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"lakehouse"'
+    
+  
+  
+[0m16:48:49.821346 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:48:49.839668 [debug] [ThreadPool]: DuckDB adapter: duckdb error: IO Error: Cannot open file "C:\Users\yabu01-82403ierunway\新しいフォルダー\data\processed\lakehouse.duckdb": 指定されたパスが見つかりません。
+
+[0m16:48:49.840122 [debug] [ThreadPool]: DuckDB adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.12.4", "profile_name": "flight_lakehouse", "target_name": "dev", "connection_name": "list_lakehouse"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"lakehouse"'
+    
+  
+  
+[0m16:48:49.840416 [debug] [ThreadPool]: DuckDB adapter: Rolling back transaction.
+[0m16:48:49.840685 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:48:49.854915 [debug] [ThreadPool]: DuckDB adapter: duckdb error: IO Error: Cannot open file "C:\Users\yabu01-82403ierunway\新しいフォルダー\data\processed\lakehouse.duckdb": 指定されたパスが見つかりません。
+
+[0m16:48:49.855344 [debug] [ThreadPool]: DuckDB adapter: Error running SQL: macro list_schemas
+[0m16:48:49.855616 [debug] [ThreadPool]: DuckDB adapter: Rolling back transaction.
+[0m16:48:49.855861 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:48:49.871744 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:48:49.872162 [debug] [MainThread]: Connection 'list_lakehouse' was properly closed.
+[0m16:48:49.872463 [info ] [MainThread]: 
+[0m16:48:49.872893 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 0.14 seconds (0.14s).
+[0m16:48:49.873423 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+IO Error: Cannot open file "C:\Users\yabu01-82403ierunway\新しいフォルダー\data\processed\lakehouse.duckdb": 指定されたパスが見つかりません。
+
+[0m16:48:49.893804 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\connections.py", line 110, in exception_handler
+    yield
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\sql\connections.py", line 147, in add_query
+    cursor = connection.handle.cursor()
+             ^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\contracts\connection.py", line 96, in handle
+    self._handle.resolve(self)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\contracts\connection.py", line 120, in resolve
+    return self.opener(connection)
+           ~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\connections.py", line 68, in open
+    connection.handle = cls._ENV.handle()
+                        ~~~~~~~~~~~~~~~^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\environments\local.py", line 79, in handle
+    self.conn = self.initialize_db(self.creds, self._plugins)
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\environments\__init__.py", line 164, in initialize_db
+    conn = duckdb.connect(creds.path, read_only=False, config=config)
+_duckdb.IOException: IO Error: Cannot open file "C:\Users\yabu01-82403ierunway\新しいフォルダー\data\processed\lakehouse.duckdb": 指定されたパスが見つかりません。
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\connections.py", line 110, in exception_handler
+    yield
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\base\impl.py", line 1372, in execute_macro
+    result = macro_function(**kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt_common\clients\jinja.py", line 427, in __call__
+    return self.call_macro(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt_common\clients\jinja.py", line 395, in call_macro
+    return macro(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 770, in __call__
+    return self._invoke(arguments, autoescape)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 784, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 20, in macro
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\sandbox.py", line 401, in call
+    return __context.call(__obj, *args, **kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 303, in call
+    return __obj(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\clients\jinja.py", line 151, in __call__
+    return self.call_macro(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt_common\clients\jinja.py", line 395, in call_macro
+    return macro(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 770, in __call__
+    return self._invoke(arguments, autoescape)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 784, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 50, in macro
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\sandbox.py", line 401, in call
+    return __context.call(__obj, *args, **kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 303, in call
+    return __obj(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\clients\jinja.py", line 151, in __call__
+    return self.call_macro(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt_common\clients\jinja.py", line 395, in call_macro
+    return macro(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 770, in __call__
+    return self._invoke(arguments, autoescape)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 784, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 33, in macro
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\sandbox.py", line 401, in call
+    return __context.call(__obj, *args, **kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 303, in call
+    return __obj(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\clients\jinja.py", line 151, in __call__
+    return self.call_macro(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt_common\clients\jinja.py", line 395, in call_macro
+    return macro(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 770, in __call__
+    return self._invoke(arguments, autoescape)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 784, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 52, in macro
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\sandbox.py", line 401, in call
+    return __context.call(__obj, *args, **kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 303, in call
+    return __obj(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt_common\record.py", line 538, in record_replay_wrapper
+    return func_to_record(*call_args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\base\impl.py", line 523, in execute
+    return self.connections.execute(sql=sql, auto_begin=auto_begin, fetch=fetch, limit=limit)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\connections.py", line 145, in execute
+    return super().execute(sql, auto_begin, fetch, limit)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\sql\connections.py", line 219, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+                ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\sql\connections.py", line 131, in add_query
+    with self.exception_handler(sql):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\yabu01-82403ierunway\AppData\Local\Python\pythoncore-3.14-64\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\connections.py", line 117, in exception_handler
+    self.rollback_if_open()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\base\connections.py", line 125, in rollback_if_open
+    if conn is not None and conn.handle and conn.transaction_open:
+                            ^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\contracts\connection.py", line 96, in handle
+    self._handle.resolve(self)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\contracts\connection.py", line 120, in resolve
+    return self.opener(connection)
+           ~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\connections.py", line 68, in open
+    connection.handle = cls._ENV.handle()
+                        ~~~~~~~~~~~~~~~^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\environments\local.py", line 79, in handle
+    self.conn = self.initialize_db(self.creds, self._plugins)
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\environments\__init__.py", line 164, in initialize_db
+    conn = duckdb.connect(creds.path, read_only=False, config=config)
+_duckdb.IOException: IO Error: Cannot open file "C:\Users\yabu01-82403ierunway\新しいフォルダー\data\processed\lakehouse.duckdb": 指定されたパスが見つかりません。
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\cli\requires.py", line 198, in wrapper
+    result, success = func(*args, **kwargs)
+                      ~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\cli\requires.py", line 144, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\cli\requires.py", line 295, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\cli\requires.py", line 340, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\cli\requires.py", line 387, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\cli\requires.py", line 404, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\cli\main.py", line 609, in run
+    results = task.run()
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\task\runnable.py", line 775, in run
+    result = self.execute_with_hooks(selected_uids)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\task\runnable.py", line 701, in execute_with_hooks
+    before_run_status = self.before_run(adapter, selected_uids)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\task\run.py", line 1313, in before_run
+    self.create_schemas(adapter, required_schemas)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\task\runnable.py", line 883, in create_schemas
+    existing_schemas_lowered.update(ls_future.result())
+                                    ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\yabu01-82403ierunway\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\_base.py", line 447, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\yabu01-82403ierunway\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\_base.py", line 396, in __get_result
+    raise self._exception
+  File "C:\Users\yabu01-82403ierunway\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Users\yabu01-82403ierunway\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt_common\utils\executor.py", line 20, in connected
+    return func(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\task\runnable.py", line 858, in list_schemas
+    for s in adapter.list_schemas(database_quoted)
+             ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\sql\impl.py", line 219, in list_schemas
+    results = self.execute_macro(LIST_SCHEMAS_MACRO_NAME, kwargs={"database": database})
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\base\impl.py", line 1371, in execute_macro
+    with self.connections.exception_handler(f"macro {macro_name}"):
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\AppData\Local\Python\pythoncore-3.14-64\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\connections.py", line 117, in exception_handler
+    self.rollback_if_open()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\base\connections.py", line 125, in rollback_if_open
+    if conn is not None and conn.handle and conn.transaction_open:
+                            ^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\contracts\connection.py", line 96, in handle
+    self._handle.resolve(self)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\contracts\connection.py", line 120, in resolve
+    return self.opener(connection)
+           ~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\connections.py", line 68, in open
+    connection.handle = cls._ENV.handle()
+                        ~~~~~~~~~~~~~~~^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\environments\local.py", line 79, in handle
+    self.conn = self.initialize_db(self.creds, self._plugins)
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\environments\__init__.py", line 164, in initialize_db
+    conn = duckdb.connect(creds.path, read_only=False, config=config)
+_duckdb.IOException: IO Error: Cannot open file "C:\Users\yabu01-82403ierunway\新しいフォルダー\data\processed\lakehouse.duckdb": 指定されたパスが見つかりません。
+
+
+[0m16:48:49.896057 [debug] [MainThread]: Command `dbt run` failed at 16:48:49.895925 after 3.12 seconds
+[0m16:48:49.896441 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F830FC13D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F83124DFF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F83124E360>]}
+[0m16:48:49.896788 [debug] [MainThread]: Flushing usage events
+[0m16:48:50.891867 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:52:54.097868 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A4C6FA6BA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A4C4A4EC10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A4C99C79D0>]}
+
+
+============================== 16:52:54.101889 | 629797ec-896e-4d64-ac4f-300a28467ed6 ==============================
+[0m16:52:54.101889 [info ] [MainThread]: Running with dbt=1.12.4
+[0m16:52:54.102654 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'maximum_seed_size_mib': '1', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\yabu01-82403ierunway\\新しいフォルダー\\flight-analytics-lakehouse\\dbt_project', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'hints_enabled': 'True', 'invocation_command': 'dbt run --profiles-dir C:\\Users\\yabu01-82403ierunway\\新しいフォルダー\\flight-analytics-lakehouse\\dbt_project --project-dir C:\\Users\\yabu01-82403ierunway\\新しいフォルダー\\flight-analytics-lakehouse\\dbt_project', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'C:\\Users\\yabu01-82403ierunway\\新しいフォルダー\\flight-analytics-lakehouse\\dbt_project\\logs'}
+[0m16:52:54.476801 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '629797ec-896e-4d64-ac4f-300a28467ed6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A4C9A9A9E0>]}
+[0m16:52:54.591951 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '629797ec-896e-4d64-ac4f-300a28467ed6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A4C978F020>]}
+[0m16:52:54.596078 [info ] [MainThread]: Registered adapter: duckdb=1.11.0
+[0m16:52:54.938747 [debug] [MainThread]: checksum: dfa98aa6599678cb5e51de9fac4ca9735c7b94a07e1a525fd3802eb04e736270, vars: {}, profile: flight_lakehouse, target: dev, version: 1.12.4
+[0m16:52:55.098540 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m16:52:55.098968 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m16:52:55.099277 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m16:52:55.111452 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '629797ec-896e-4d64-ac4f-300a28467ed6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A4CB4A1250>]}
+[0m16:52:55.273592 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\dbt_project\target\manifest.json
+[0m16:52:55.277185 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\dbt_project\target\semantic_manifest.json
+[0m16:52:55.300440 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\dbt_project\target\osi_document.json
+[0m16:52:55.312546 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '629797ec-896e-4d64-ac4f-300a28467ed6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A4CB5A59A0>]}
+[0m16:52:55.313186 [info ] [MainThread]: Found 3 models, 7 data tests, 500 macros
+[0m16:52:55.313720 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '629797ec-896e-4d64-ac4f-300a28467ed6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A4CB5BA5F0>]}
+[0m16:52:55.316035 [info ] [MainThread]: 
+[0m16:52:55.316586 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m16:52:55.317020 [info ] [MainThread]: 
+[0m16:52:55.317659 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m16:52:55.323974 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_lakehouse'
+[0m16:52:55.417083 [debug] [ThreadPool]: Using duckdb connection "list_lakehouse"
+[0m16:52:55.417614 [debug] [ThreadPool]: On list_lakehouse: /* {"app": "dbt", "dbt_version": "1.12.4", "profile_name": "flight_lakehouse", "target_name": "dev", "connection_name": "list_lakehouse"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"lakehouse"'
+    
+  
+  
+[0m16:52:55.417982 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:52:55.436128 [debug] [ThreadPool]: DuckDB adapter: duckdb error: IO Error: Cannot open file "C:\Users\yabu01-82403ierunway\新しいフォルダー\data\processed\lakehouse.duckdb": 指定されたパスが見つかりません。
+
+[0m16:52:55.436611 [debug] [ThreadPool]: DuckDB adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.12.4", "profile_name": "flight_lakehouse", "target_name": "dev", "connection_name": "list_lakehouse"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"lakehouse"'
+    
+  
+  
+[0m16:52:55.436954 [debug] [ThreadPool]: DuckDB adapter: Rolling back transaction.
+[0m16:52:55.437300 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:52:55.453946 [debug] [ThreadPool]: DuckDB adapter: duckdb error: IO Error: Cannot open file "C:\Users\yabu01-82403ierunway\新しいフォルダー\data\processed\lakehouse.duckdb": 指定されたパスが見つかりません。
+
+[0m16:52:55.454387 [debug] [ThreadPool]: DuckDB adapter: Error running SQL: macro list_schemas
+[0m16:52:55.454666 [debug] [ThreadPool]: DuckDB adapter: Rolling back transaction.
+[0m16:52:55.454917 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:52:55.471845 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:52:55.472236 [debug] [MainThread]: Connection 'list_lakehouse' was properly closed.
+[0m16:52:55.472517 [info ] [MainThread]: 
+[0m16:52:55.472927 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 0.16 seconds (0.16s).
+[0m16:52:55.473533 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+IO Error: Cannot open file "C:\Users\yabu01-82403ierunway\新しいフォルダー\data\processed\lakehouse.duckdb": 指定されたパスが見つかりません。
+
+[0m16:52:55.491882 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\connections.py", line 110, in exception_handler
+    yield
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\sql\connections.py", line 147, in add_query
+    cursor = connection.handle.cursor()
+             ^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\contracts\connection.py", line 96, in handle
+    self._handle.resolve(self)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\contracts\connection.py", line 120, in resolve
+    return self.opener(connection)
+           ~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\connections.py", line 68, in open
+    connection.handle = cls._ENV.handle()
+                        ~~~~~~~~~~~~~~~^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\environments\local.py", line 79, in handle
+    self.conn = self.initialize_db(self.creds, self._plugins)
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\environments\__init__.py", line 164, in initialize_db
+    conn = duckdb.connect(creds.path, read_only=False, config=config)
+_duckdb.IOException: IO Error: Cannot open file "C:\Users\yabu01-82403ierunway\新しいフォルダー\data\processed\lakehouse.duckdb": 指定されたパスが見つかりません。
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\connections.py", line 110, in exception_handler
+    yield
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\base\impl.py", line 1372, in execute_macro
+    result = macro_function(**kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt_common\clients\jinja.py", line 427, in __call__
+    return self.call_macro(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt_common\clients\jinja.py", line 395, in call_macro
+    return macro(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 770, in __call__
+    return self._invoke(arguments, autoescape)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 784, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 20, in macro
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\sandbox.py", line 401, in call
+    return __context.call(__obj, *args, **kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 303, in call
+    return __obj(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\clients\jinja.py", line 151, in __call__
+    return self.call_macro(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt_common\clients\jinja.py", line 395, in call_macro
+    return macro(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 770, in __call__
+    return self._invoke(arguments, autoescape)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 784, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 50, in macro
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\sandbox.py", line 401, in call
+    return __context.call(__obj, *args, **kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 303, in call
+    return __obj(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\clients\jinja.py", line 151, in __call__
+    return self.call_macro(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt_common\clients\jinja.py", line 395, in call_macro
+    return macro(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 770, in __call__
+    return self._invoke(arguments, autoescape)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 784, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 33, in macro
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\sandbox.py", line 401, in call
+    return __context.call(__obj, *args, **kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 303, in call
+    return __obj(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\clients\jinja.py", line 151, in __call__
+    return self.call_macro(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt_common\clients\jinja.py", line 395, in call_macro
+    return macro(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 770, in __call__
+    return self._invoke(arguments, autoescape)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 784, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 52, in macro
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\sandbox.py", line 401, in call
+    return __context.call(__obj, *args, **kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 303, in call
+    return __obj(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt_common\record.py", line 538, in record_replay_wrapper
+    return func_to_record(*call_args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\base\impl.py", line 523, in execute
+    return self.connections.execute(sql=sql, auto_begin=auto_begin, fetch=fetch, limit=limit)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\connections.py", line 145, in execute
+    return super().execute(sql, auto_begin, fetch, limit)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\sql\connections.py", line 219, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+                ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\sql\connections.py", line 131, in add_query
+    with self.exception_handler(sql):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\yabu01-82403ierunway\AppData\Local\Python\pythoncore-3.14-64\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\connections.py", line 117, in exception_handler
+    self.rollback_if_open()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\base\connections.py", line 125, in rollback_if_open
+    if conn is not None and conn.handle and conn.transaction_open:
+                            ^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\contracts\connection.py", line 96, in handle
+    self._handle.resolve(self)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\contracts\connection.py", line 120, in resolve
+    return self.opener(connection)
+           ~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\connections.py", line 68, in open
+    connection.handle = cls._ENV.handle()
+                        ~~~~~~~~~~~~~~~^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\environments\local.py", line 79, in handle
+    self.conn = self.initialize_db(self.creds, self._plugins)
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\environments\__init__.py", line 164, in initialize_db
+    conn = duckdb.connect(creds.path, read_only=False, config=config)
+_duckdb.IOException: IO Error: Cannot open file "C:\Users\yabu01-82403ierunway\新しいフォルダー\data\processed\lakehouse.duckdb": 指定されたパスが見つかりません。
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\cli\requires.py", line 198, in wrapper
+    result, success = func(*args, **kwargs)
+                      ~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\cli\requires.py", line 144, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\cli\requires.py", line 295, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\cli\requires.py", line 340, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\cli\requires.py", line 387, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\cli\requires.py", line 404, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\cli\main.py", line 609, in run
+    results = task.run()
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\task\runnable.py", line 775, in run
+    result = self.execute_with_hooks(selected_uids)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\task\runnable.py", line 701, in execute_with_hooks
+    before_run_status = self.before_run(adapter, selected_uids)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\task\run.py", line 1313, in before_run
+    self.create_schemas(adapter, required_schemas)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\task\runnable.py", line 883, in create_schemas
+    existing_schemas_lowered.update(ls_future.result())
+                                    ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\yabu01-82403ierunway\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\_base.py", line 447, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\yabu01-82403ierunway\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\_base.py", line 396, in __get_result
+    raise self._exception
+  File "C:\Users\yabu01-82403ierunway\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Users\yabu01-82403ierunway\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt_common\utils\executor.py", line 20, in connected
+    return func(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\task\runnable.py", line 858, in list_schemas
+    for s in adapter.list_schemas(database_quoted)
+             ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\sql\impl.py", line 219, in list_schemas
+    results = self.execute_macro(LIST_SCHEMAS_MACRO_NAME, kwargs={"database": database})
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\base\impl.py", line 1371, in execute_macro
+    with self.connections.exception_handler(f"macro {macro_name}"):
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\AppData\Local\Python\pythoncore-3.14-64\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\connections.py", line 117, in exception_handler
+    self.rollback_if_open()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\base\connections.py", line 125, in rollback_if_open
+    if conn is not None and conn.handle and conn.transaction_open:
+                            ^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\contracts\connection.py", line 96, in handle
+    self._handle.resolve(self)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\contracts\connection.py", line 120, in resolve
+    return self.opener(connection)
+           ~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\connections.py", line 68, in open
+    connection.handle = cls._ENV.handle()
+                        ~~~~~~~~~~~~~~~^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\environments\local.py", line 79, in handle
+    self.conn = self.initialize_db(self.creds, self._plugins)
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\environments\__init__.py", line 164, in initialize_db
+    conn = duckdb.connect(creds.path, read_only=False, config=config)
+_duckdb.IOException: IO Error: Cannot open file "C:\Users\yabu01-82403ierunway\新しいフォルダー\data\processed\lakehouse.duckdb": 指定されたパスが見つかりません。
+
+
+[0m16:52:55.494284 [debug] [MainThread]: Command `dbt run` failed at 16:52:55.494144 after 1.66 seconds
+[0m16:52:55.494714 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A4C7C9E820>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A4CB5A2450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A4CB5A2390>]}
+[0m16:52:55.495101 [debug] [MainThread]: Flushing usage events
+[0m16:52:56.433807 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:54:19.730259 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022EA3336BA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022EA0DEEC10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022EA5D579D0>]}
+
+
+============================== 16:54:19.734798 | 1e2dd535-bbc9-4f46-81e7-ba1a07c4aa6d ==============================
+[0m16:54:19.734798 [info ] [MainThread]: Running with dbt=1.12.4
+[0m16:54:19.735508 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'version_check': 'True', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\yabu01-82403ierunway\\新しいフォルダー\\flight-analytics-lakehouse\\dbt_project', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'hints_enabled': 'True', 'invocation_command': 'dbt run --profiles-dir C:\\Users\\yabu01-82403ierunway\\新しいフォルダー\\flight-analytics-lakehouse\\dbt_project --project-dir C:\\Users\\yabu01-82403ierunway\\新しいフォルダー\\flight-analytics-lakehouse\\dbt_project', 'use_experimental_parser': 'False', 'use_colors': 'True', 'log_path': 'C:\\Users\\yabu01-82403ierunway\\新しいフォルダー\\flight-analytics-lakehouse\\dbt_project\\logs'}
+[0m16:54:20.079202 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '1e2dd535-bbc9-4f46-81e7-ba1a07c4aa6d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022EA5E2A9E0>]}
+[0m16:54:20.187729 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '1e2dd535-bbc9-4f46-81e7-ba1a07c4aa6d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022EA5B1F020>]}
+[0m16:54:20.190441 [info ] [MainThread]: Registered adapter: duckdb=1.11.0
+[0m16:54:20.499938 [debug] [MainThread]: checksum: dfa98aa6599678cb5e51de9fac4ca9735c7b94a07e1a525fd3802eb04e736270, vars: {}, profile: flight_lakehouse, target: dev, version: 1.12.4
+[0m16:54:20.649204 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m16:54:20.649593 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m16:54:20.649876 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m16:54:20.661222 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '1e2dd535-bbc9-4f46-81e7-ba1a07c4aa6d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022EA78F1250>]}
+[0m16:54:20.794342 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\dbt_project\target\manifest.json
+[0m16:54:20.797796 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\dbt_project\target\semantic_manifest.json
+[0m16:54:20.819903 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\dbt_project\target\osi_document.json
+[0m16:54:20.831872 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '1e2dd535-bbc9-4f46-81e7-ba1a07c4aa6d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022EA79F99A0>]}
+[0m16:54:20.832343 [info ] [MainThread]: Found 3 models, 7 data tests, 500 macros
+[0m16:54:20.832811 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1e2dd535-bbc9-4f46-81e7-ba1a07c4aa6d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022EA7A0E5F0>]}
+[0m16:54:20.835023 [info ] [MainThread]: 
+[0m16:54:20.835451 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m16:54:20.835848 [info ] [MainThread]: 
+[0m16:54:20.836396 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m16:54:20.844374 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_lakehouse'
+[0m16:54:20.932084 [debug] [ThreadPool]: Using duckdb connection "list_lakehouse"
+[0m16:54:20.932495 [debug] [ThreadPool]: On list_lakehouse: /* {"app": "dbt", "dbt_version": "1.12.4", "profile_name": "flight_lakehouse", "target_name": "dev", "connection_name": "list_lakehouse"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"lakehouse"'
+    
+  
+  
+[0m16:54:20.932782 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:54:20.948921 [debug] [ThreadPool]: DuckDB adapter: duckdb error: IO Error: Cannot open file "C:\Users\yabu01-82403ierunway\新しいフォルダー\data\processed\lakehouse.duckdb": 指定されたパスが見つかりません。
+
+[0m16:54:20.949483 [debug] [ThreadPool]: DuckDB adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.12.4", "profile_name": "flight_lakehouse", "target_name": "dev", "connection_name": "list_lakehouse"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"lakehouse"'
+    
+  
+  
+[0m16:54:20.949782 [debug] [ThreadPool]: DuckDB adapter: Rolling back transaction.
+[0m16:54:20.950117 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:54:20.964211 [debug] [ThreadPool]: DuckDB adapter: duckdb error: IO Error: Cannot open file "C:\Users\yabu01-82403ierunway\新しいフォルダー\data\processed\lakehouse.duckdb": 指定されたパスが見つかりません。
+
+[0m16:54:20.964647 [debug] [ThreadPool]: DuckDB adapter: Error running SQL: macro list_schemas
+[0m16:54:20.965321 [debug] [ThreadPool]: DuckDB adapter: Rolling back transaction.
+[0m16:54:20.965720 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:54:20.982159 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:54:20.982538 [debug] [MainThread]: Connection 'list_lakehouse' was properly closed.
+[0m16:54:20.982817 [info ] [MainThread]: 
+[0m16:54:20.983251 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 0.15 seconds (0.15s).
+[0m16:54:20.983818 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+IO Error: Cannot open file "C:\Users\yabu01-82403ierunway\新しいフォルダー\data\processed\lakehouse.duckdb": 指定されたパスが見つかりません。
+
+[0m16:54:21.000627 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\connections.py", line 110, in exception_handler
+    yield
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\sql\connections.py", line 147, in add_query
+    cursor = connection.handle.cursor()
+             ^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\contracts\connection.py", line 96, in handle
+    self._handle.resolve(self)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\contracts\connection.py", line 120, in resolve
+    return self.opener(connection)
+           ~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\connections.py", line 68, in open
+    connection.handle = cls._ENV.handle()
+                        ~~~~~~~~~~~~~~~^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\environments\local.py", line 79, in handle
+    self.conn = self.initialize_db(self.creds, self._plugins)
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\environments\__init__.py", line 164, in initialize_db
+    conn = duckdb.connect(creds.path, read_only=False, config=config)
+_duckdb.IOException: IO Error: Cannot open file "C:\Users\yabu01-82403ierunway\新しいフォルダー\data\processed\lakehouse.duckdb": 指定されたパスが見つかりません。
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\connections.py", line 110, in exception_handler
+    yield
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\base\impl.py", line 1372, in execute_macro
+    result = macro_function(**kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt_common\clients\jinja.py", line 427, in __call__
+    return self.call_macro(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt_common\clients\jinja.py", line 395, in call_macro
+    return macro(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 770, in __call__
+    return self._invoke(arguments, autoescape)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 784, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 20, in macro
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\sandbox.py", line 401, in call
+    return __context.call(__obj, *args, **kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 303, in call
+    return __obj(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\clients\jinja.py", line 151, in __call__
+    return self.call_macro(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt_common\clients\jinja.py", line 395, in call_macro
+    return macro(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 770, in __call__
+    return self._invoke(arguments, autoescape)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 784, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 50, in macro
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\sandbox.py", line 401, in call
+    return __context.call(__obj, *args, **kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 303, in call
+    return __obj(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\clients\jinja.py", line 151, in __call__
+    return self.call_macro(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt_common\clients\jinja.py", line 395, in call_macro
+    return macro(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 770, in __call__
+    return self._invoke(arguments, autoescape)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 784, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 33, in macro
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\sandbox.py", line 401, in call
+    return __context.call(__obj, *args, **kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 303, in call
+    return __obj(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\clients\jinja.py", line 151, in __call__
+    return self.call_macro(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt_common\clients\jinja.py", line 395, in call_macro
+    return macro(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 770, in __call__
+    return self._invoke(arguments, autoescape)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 784, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 52, in macro
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\sandbox.py", line 401, in call
+    return __context.call(__obj, *args, **kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 303, in call
+    return __obj(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt_common\record.py", line 538, in record_replay_wrapper
+    return func_to_record(*call_args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\base\impl.py", line 523, in execute
+    return self.connections.execute(sql=sql, auto_begin=auto_begin, fetch=fetch, limit=limit)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\connections.py", line 145, in execute
+    return super().execute(sql, auto_begin, fetch, limit)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\sql\connections.py", line 219, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+                ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\sql\connections.py", line 131, in add_query
+    with self.exception_handler(sql):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\yabu01-82403ierunway\AppData\Local\Python\pythoncore-3.14-64\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\connections.py", line 117, in exception_handler
+    self.rollback_if_open()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\base\connections.py", line 125, in rollback_if_open
+    if conn is not None and conn.handle and conn.transaction_open:
+                            ^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\contracts\connection.py", line 96, in handle
+    self._handle.resolve(self)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\contracts\connection.py", line 120, in resolve
+    return self.opener(connection)
+           ~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\connections.py", line 68, in open
+    connection.handle = cls._ENV.handle()
+                        ~~~~~~~~~~~~~~~^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\environments\local.py", line 79, in handle
+    self.conn = self.initialize_db(self.creds, self._plugins)
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\environments\__init__.py", line 164, in initialize_db
+    conn = duckdb.connect(creds.path, read_only=False, config=config)
+_duckdb.IOException: IO Error: Cannot open file "C:\Users\yabu01-82403ierunway\新しいフォルダー\data\processed\lakehouse.duckdb": 指定されたパスが見つかりません。
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\cli\requires.py", line 198, in wrapper
+    result, success = func(*args, **kwargs)
+                      ~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\cli\requires.py", line 144, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\cli\requires.py", line 295, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\cli\requires.py", line 340, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\cli\requires.py", line 387, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\cli\requires.py", line 404, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\cli\main.py", line 609, in run
+    results = task.run()
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\task\runnable.py", line 775, in run
+    result = self.execute_with_hooks(selected_uids)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\task\runnable.py", line 701, in execute_with_hooks
+    before_run_status = self.before_run(adapter, selected_uids)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\task\run.py", line 1313, in before_run
+    self.create_schemas(adapter, required_schemas)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\task\runnable.py", line 883, in create_schemas
+    existing_schemas_lowered.update(ls_future.result())
+                                    ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\yabu01-82403ierunway\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\_base.py", line 447, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\yabu01-82403ierunway\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\_base.py", line 396, in __get_result
+    raise self._exception
+  File "C:\Users\yabu01-82403ierunway\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Users\yabu01-82403ierunway\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt_common\utils\executor.py", line 20, in connected
+    return func(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\task\runnable.py", line 858, in list_schemas
+    for s in adapter.list_schemas(database_quoted)
+             ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\sql\impl.py", line 219, in list_schemas
+    results = self.execute_macro(LIST_SCHEMAS_MACRO_NAME, kwargs={"database": database})
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\base\impl.py", line 1371, in execute_macro
+    with self.connections.exception_handler(f"macro {macro_name}"):
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\AppData\Local\Python\pythoncore-3.14-64\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\connections.py", line 117, in exception_handler
+    self.rollback_if_open()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\base\connections.py", line 125, in rollback_if_open
+    if conn is not None and conn.handle and conn.transaction_open:
+                            ^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\contracts\connection.py", line 96, in handle
+    self._handle.resolve(self)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\contracts\connection.py", line 120, in resolve
+    return self.opener(connection)
+           ~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\connections.py", line 68, in open
+    connection.handle = cls._ENV.handle()
+                        ~~~~~~~~~~~~~~~^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\environments\local.py", line 79, in handle
+    self.conn = self.initialize_db(self.creds, self._plugins)
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\environments\__init__.py", line 164, in initialize_db
+    conn = duckdb.connect(creds.path, read_only=False, config=config)
+_duckdb.IOException: IO Error: Cannot open file "C:\Users\yabu01-82403ierunway\新しいフォルダー\data\processed\lakehouse.duckdb": 指定されたパスが見つかりません。
+
+
+[0m16:54:21.003865 [debug] [MainThread]: Command `dbt run` failed at 16:54:21.003326 after 1.52 seconds
+[0m16:54:21.004579 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022EA402E820>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022EA79F6450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022EA79F6390>]}
+[0m16:54:21.004996 [debug] [MainThread]: Flushing usage events
+[0m16:54:21.931710 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:57:15.699402 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000229CCDB6BA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000229CA85AC10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000229CF7D79D0>]}
+
+
+============================== 16:57:15.703439 | 60649623-f8d5-479f-8655-0bde8a20b67e ==============================
+[0m16:57:15.703439 [info ] [MainThread]: Running with dbt=1.12.4
+[0m16:57:15.704189 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\yabu01-82403ierunway\\新しいフォルダー\\flight-analytics-lakehouse\\dbt_project', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'hints_enabled': 'True', 'invocation_command': 'dbt run --profiles-dir C:\\Users\\yabu01-82403ierunway\\新しいフォルダー\\flight-analytics-lakehouse\\dbt_project --project-dir C:\\Users\\yabu01-82403ierunway\\新しいフォルダー\\flight-analytics-lakehouse\\dbt_project', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'C:\\Users\\yabu01-82403ierunway\\新しいフォルダー\\flight-analytics-lakehouse\\dbt_project\\logs'}
+[0m16:57:16.065251 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '60649623-f8d5-479f-8655-0bde8a20b67e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000229CF8AA9E0>]}
+[0m16:57:16.184539 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '60649623-f8d5-479f-8655-0bde8a20b67e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000229CF59F020>]}
+[0m16:57:16.187164 [info ] [MainThread]: Registered adapter: duckdb=1.11.0
+[0m16:57:16.515011 [debug] [MainThread]: checksum: dfa98aa6599678cb5e51de9fac4ca9735c7b94a07e1a525fd3802eb04e736270, vars: {}, profile: flight_lakehouse, target: dev, version: 1.12.4
+[0m16:57:16.687261 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m16:57:16.687687 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m16:57:16.687952 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m16:57:16.698901 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '60649623-f8d5-479f-8655-0bde8a20b67e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000229D1421250>]}
+[0m16:57:16.832273 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\dbt_project\target\manifest.json
+[0m16:57:16.836422 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\dbt_project\target\semantic_manifest.json
+[0m16:57:16.862354 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\dbt_project\target\osi_document.json
+[0m16:57:16.881470 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '60649623-f8d5-479f-8655-0bde8a20b67e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000229D15259A0>]}
+[0m16:57:16.882217 [info ] [MainThread]: Found 3 models, 7 data tests, 500 macros
+[0m16:57:16.882897 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '60649623-f8d5-479f-8655-0bde8a20b67e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000229D153A5F0>]}
+[0m16:57:16.886418 [info ] [MainThread]: 
+[0m16:57:16.887284 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m16:57:16.887978 [info ] [MainThread]: 
+[0m16:57:16.888875 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m16:57:16.899367 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_lakehouse'
+[0m16:57:17.012204 [debug] [ThreadPool]: Using duckdb connection "list_lakehouse"
+[0m16:57:17.012891 [debug] [ThreadPool]: On list_lakehouse: /* {"app": "dbt", "dbt_version": "1.12.4", "profile_name": "flight_lakehouse", "target_name": "dev", "connection_name": "list_lakehouse"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"lakehouse"'
+    
+  
+  
+[0m16:57:17.013407 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:57:17.036318 [debug] [ThreadPool]: DuckDB adapter: duckdb error: IO Error: Cannot open file "C:\Users\yabu01-82403ierunway\新しいフォルダー\data\processed\lakehouse.duckdb": 指定されたパスが見つかりません。
+
+[0m16:57:17.036797 [debug] [ThreadPool]: DuckDB adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.12.4", "profile_name": "flight_lakehouse", "target_name": "dev", "connection_name": "list_lakehouse"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"lakehouse"'
+    
+  
+  
+[0m16:57:17.037105 [debug] [ThreadPool]: DuckDB adapter: Rolling back transaction.
+[0m16:57:17.037380 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:57:17.052657 [debug] [ThreadPool]: DuckDB adapter: duckdb error: IO Error: Cannot open file "C:\Users\yabu01-82403ierunway\新しいフォルダー\data\processed\lakehouse.duckdb": 指定されたパスが見つかりません。
+
+[0m16:57:17.053119 [debug] [ThreadPool]: DuckDB adapter: Error running SQL: macro list_schemas
+[0m16:57:17.053393 [debug] [ThreadPool]: DuckDB adapter: Rolling back transaction.
+[0m16:57:17.053665 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:57:17.069709 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:57:17.070102 [debug] [MainThread]: Connection 'list_lakehouse' was properly closed.
+[0m16:57:17.070379 [info ] [MainThread]: 
+[0m16:57:17.070804 [info ] [MainThread]: Finished running  in 0 hours 0 minutes and 0.18 seconds (0.18s).
+[0m16:57:17.071389 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+IO Error: Cannot open file "C:\Users\yabu01-82403ierunway\新しいフォルダー\data\processed\lakehouse.duckdb": 指定されたパスが見つかりません。
+
+[0m16:57:17.087985 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\connections.py", line 110, in exception_handler
+    yield
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\sql\connections.py", line 147, in add_query
+    cursor = connection.handle.cursor()
+             ^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\contracts\connection.py", line 96, in handle
+    self._handle.resolve(self)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\contracts\connection.py", line 120, in resolve
+    return self.opener(connection)
+           ~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\connections.py", line 68, in open
+    connection.handle = cls._ENV.handle()
+                        ~~~~~~~~~~~~~~~^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\environments\local.py", line 79, in handle
+    self.conn = self.initialize_db(self.creds, self._plugins)
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\environments\__init__.py", line 164, in initialize_db
+    conn = duckdb.connect(creds.path, read_only=False, config=config)
+_duckdb.IOException: IO Error: Cannot open file "C:\Users\yabu01-82403ierunway\新しいフォルダー\data\processed\lakehouse.duckdb": 指定されたパスが見つかりません。
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\connections.py", line 110, in exception_handler
+    yield
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\base\impl.py", line 1372, in execute_macro
+    result = macro_function(**kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt_common\clients\jinja.py", line 427, in __call__
+    return self.call_macro(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt_common\clients\jinja.py", line 395, in call_macro
+    return macro(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 770, in __call__
+    return self._invoke(arguments, autoescape)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 784, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 20, in macro
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\sandbox.py", line 401, in call
+    return __context.call(__obj, *args, **kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 303, in call
+    return __obj(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\clients\jinja.py", line 151, in __call__
+    return self.call_macro(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt_common\clients\jinja.py", line 395, in call_macro
+    return macro(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 770, in __call__
+    return self._invoke(arguments, autoescape)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 784, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 50, in macro
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\sandbox.py", line 401, in call
+    return __context.call(__obj, *args, **kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 303, in call
+    return __obj(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\clients\jinja.py", line 151, in __call__
+    return self.call_macro(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt_common\clients\jinja.py", line 395, in call_macro
+    return macro(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 770, in __call__
+    return self._invoke(arguments, autoescape)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 784, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 33, in macro
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\sandbox.py", line 401, in call
+    return __context.call(__obj, *args, **kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 303, in call
+    return __obj(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\clients\jinja.py", line 151, in __call__
+    return self.call_macro(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt_common\clients\jinja.py", line 395, in call_macro
+    return macro(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 770, in __call__
+    return self._invoke(arguments, autoescape)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 784, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 52, in macro
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\sandbox.py", line 401, in call
+    return __context.call(__obj, *args, **kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\jinja2\runtime.py", line 303, in call
+    return __obj(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt_common\record.py", line 538, in record_replay_wrapper
+    return func_to_record(*call_args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\base\impl.py", line 523, in execute
+    return self.connections.execute(sql=sql, auto_begin=auto_begin, fetch=fetch, limit=limit)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\connections.py", line 145, in execute
+    return super().execute(sql, auto_begin, fetch, limit)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\sql\connections.py", line 219, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+                ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\sql\connections.py", line 131, in add_query
+    with self.exception_handler(sql):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\yabu01-82403ierunway\AppData\Local\Python\pythoncore-3.14-64\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\connections.py", line 117, in exception_handler
+    self.rollback_if_open()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\base\connections.py", line 125, in rollback_if_open
+    if conn is not None and conn.handle and conn.transaction_open:
+                            ^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\contracts\connection.py", line 96, in handle
+    self._handle.resolve(self)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\contracts\connection.py", line 120, in resolve
+    return self.opener(connection)
+           ~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\connections.py", line 68, in open
+    connection.handle = cls._ENV.handle()
+                        ~~~~~~~~~~~~~~~^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\environments\local.py", line 79, in handle
+    self.conn = self.initialize_db(self.creds, self._plugins)
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\environments\__init__.py", line 164, in initialize_db
+    conn = duckdb.connect(creds.path, read_only=False, config=config)
+_duckdb.IOException: IO Error: Cannot open file "C:\Users\yabu01-82403ierunway\新しいフォルダー\data\processed\lakehouse.duckdb": 指定されたパスが見つかりません。
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\cli\requires.py", line 198, in wrapper
+    result, success = func(*args, **kwargs)
+                      ~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\cli\requires.py", line 144, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\cli\requires.py", line 295, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\cli\requires.py", line 340, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\cli\requires.py", line 387, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\cli\requires.py", line 404, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\cli\main.py", line 609, in run
+    results = task.run()
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\task\runnable.py", line 775, in run
+    result = self.execute_with_hooks(selected_uids)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\task\runnable.py", line 701, in execute_with_hooks
+    before_run_status = self.before_run(adapter, selected_uids)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\task\run.py", line 1313, in before_run
+    self.create_schemas(adapter, required_schemas)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\task\runnable.py", line 883, in create_schemas
+    existing_schemas_lowered.update(ls_future.result())
+                                    ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\yabu01-82403ierunway\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\_base.py", line 447, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\yabu01-82403ierunway\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\_base.py", line 396, in __get_result
+    raise self._exception
+  File "C:\Users\yabu01-82403ierunway\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Users\yabu01-82403ierunway\AppData\Local\Python\pythoncore-3.14-64\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt_common\utils\executor.py", line 20, in connected
+    return func(*args, **kwargs)
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\task\runnable.py", line 858, in list_schemas
+    for s in adapter.list_schemas(database_quoted)
+             ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\sql\impl.py", line 219, in list_schemas
+    results = self.execute_macro(LIST_SCHEMAS_MACRO_NAME, kwargs={"database": database})
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\base\impl.py", line 1371, in execute_macro
+    with self.connections.exception_handler(f"macro {macro_name}"):
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\AppData\Local\Python\pythoncore-3.14-64\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\connections.py", line 117, in exception_handler
+    self.rollback_if_open()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\base\connections.py", line 125, in rollback_if_open
+    if conn is not None and conn.handle and conn.transaction_open:
+                            ^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\contracts\connection.py", line 96, in handle
+    self._handle.resolve(self)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\contracts\connection.py", line 120, in resolve
+    return self.opener(connection)
+           ~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\connections.py", line 68, in open
+    connection.handle = cls._ENV.handle()
+                        ~~~~~~~~~~~~~~~^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\environments\local.py", line 79, in handle
+    self.conn = self.initialize_db(self.creds, self._plugins)
+                ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yabu01-82403ierunway\新しいフォルダー\flight-analytics-lakehouse\.venv\Lib\site-packages\dbt\adapters\duckdb\environments\__init__.py", line 164, in initialize_db
+    conn = duckdb.connect(creds.path, read_only=False, config=config)
+_duckdb.IOException: IO Error: Cannot open file "C:\Users\yabu01-82403ierunway\新しいフォルダー\data\processed\lakehouse.duckdb": 指定されたパスが見つかりません。
+
+
+[0m16:57:17.090847 [debug] [MainThread]: Command `dbt run` failed at 16:57:17.090586 after 1.64 seconds
+[0m16:57:17.091552 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000229CDAAE820>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000229D1522450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000229D1522390>]}
+[0m16:57:17.091984 [debug] [MainThread]: Flushing usage events
+[0m16:57:17.998413 [debug] [MainThread]: An error was encountered while trying to flush usage events

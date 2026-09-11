@@ -49,7 +49,7 @@ def run_dbt_transformations() -> None:
         sys.exit(1)
 
     result = subprocess.run(
-        ["dbt", "run", "--project-dir", str(DBT_PROJECT_DIR)],
+        ["dbt", "run", "--profiles-dir", str(DBT_PROJECT_DIR), "--project-dir", str(DBT_PROJECT_DIR)],
         check=False
     )
 
