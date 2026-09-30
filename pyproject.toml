@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools==84.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "flight-analytics-lakehouse"
+version = "0.2.0"
+description = "Local flight-performance and aircraft-observation analytics with DuckDB and dbt"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "duckdb==1.5.6",
+    "pyarrow==25.0.1",
+    "polars==1.44.2",
+    "httpx==0.28.1",
+    "pydantic==2.13.5",
+    "pydantic-settings==2.15.0",
+    "dlt[duckdb]==1.30.0",
+    "dbt-core==1.12.5",
+    "dbt-duckdb==1.11.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest==9.1.1"]
+
+[tool.setuptools.packages.find]
+include = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

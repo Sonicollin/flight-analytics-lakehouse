@@ -1,0 +1,97 @@
+version: 2
+sources:
+  - name: raw
+    schema: raw
+    tables:
+      - name: bts_flights
+        description: One archive row; a month is replaced on rerun. Parquet-backed DuckDB view.
+      - name: raw_opensky_states
+        description: Validated observations merged by snapshot_time and icao24 using dlt.
+models:
+  - name: stg_bts_flights
+    description: One reported BTS row, identified by year/month/source-row ordinal. This is lineage, not a cross-source flight ID.
+    columns:
+      - name: bts_row_id
+        data_tests: [not_null, unique]
+      - name: source_row
+        data_tests: [not_null]
+      - name: flight_date
+        data_tests: [not_null]
+      - name: carrier
+        data_tests: [not_null]
+      - name: origin
+        data_tests: [not_null]
+      - name: dest
+        data_tests: [not_null]
+      - name: year
+        data_tests: [not_null]
+      - name: month
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+                quote: false
+      - name: cancelled
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments: {values: [0, 1], quote: false}
+      - name: diverted
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments: {values: [0, 1], quote: false}
+  - name: int_bts_flight_outcomes
+    description: BTS rows with explicit eligibility and delay outcomes. Missing delay stays unknown.
+    columns:
+      - name: bts_row_id
+        data_tests:
+          - not_null
+          - unique
+          - relationships:
+              arguments: {to: "ref('stg_bts_flights')", field: bts_row_id}
+      - name: is_arrival_eligible
+        data_tests: [not_null]
+  - name: mart_bts_carrier_monthly
+    description: Carrier/year/month performance. Delay denominator is non-cancelled, non-diverted arrivals with measured delay; rank uses average arrival delay and does not adjust for route mix.
+    columns:
+      - name: carrier_month_id
+        data_tests: [not_null, unique]
+      - name: carrier
+        data_tests: [not_null]
+      - name: total_flights
+        data_tests: [not_null]
+      - name: eligible_arrivals
+        data_tests: [not_null]
+  - name: stg_opensky_states
+    description: One aircraft/snapshot observation. registration_country is inferred from the ICAO address, not departure country. UTC timestamps; altitude meters; speed m/s; track degrees.
+    columns:
+      - name: observation_id
+        data_tests: [not_null, unique]
+      - name: icao24
+        data_tests: [not_null]
+      - name: snapshot_timestamp
+        data_tests: [not_null]
+      - name: last_contact_timestamp
+        data_tests: [not_null]
+      - name: registration_country
+        data_tests: [not_null]
+      - name: on_ground
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments: {values: [true, false], quote: false}
+  - name: mart_opensky_snapshot_activity
+    description: One observed snapshot; aircraft counts are sensor observations in the configured bounding box, never scheduled flights or a complete traffic census.
+    columns:
+      - name: snapshot_time
+        data_tests:
+          - not_null
+          - unique
+          - relationships:
+              arguments: {to: "ref('stg_opensky_states')", field: snapshot_time}
+      - name: snapshot_timestamp
+        data_tests: [not_null]
+      - name: observed_aircraft
+        data_tests: [not_null]
