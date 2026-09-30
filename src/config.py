@@ -14,7 +14,7 @@ class SystemConfig(BaseSettings):
     PROCESSED_DATA_DIR: Path = BASE_DIR / "data" / "processed"
 
     # Persistent Storage Target
-    DUCKDB_PATH: Path = BASE_DIR / "data" / "lakehouse.duckdb"
+    DUCKDB_PATH: Path = BASE_DIR / "data" / "processed" / "lakehouse.duckdb"
 
     # DuckDB In-Process Engine Limits
     # Prevents OOM by capping maximum RAM allocation for query execution

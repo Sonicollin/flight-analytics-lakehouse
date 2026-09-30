@@ -3,5 +3,5 @@ flight_lakehouse:
   outputs:
     dev:
       type: duckdb
-      path: "../data/lakehouse.duckdb"
+      path: "C:/Users/yabu01-82403ierunway/新しいフォルダー/flight-analytics-lakehouse/data/processed/lakehouse.duckdb"
       threads: 4

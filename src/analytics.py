@@ -1,3 +1,4 @@
+from pathlib import Path
 from typing import cast
 import duckdb
 import polars as pl
@@ -19,8 +20,14 @@ class FlightAnalyticsEngine:
 
     def _register_parquet_views(self) -> None:
         """Scan Hive-partitioned Parquet directory directly without loading into memory."""
-        parquet_path = str(config.PROCESSED_DATA_DIR / "**" / "*.parquet")
+        base_dir = config.PROCESSED_DATA_DIR
 
+        # Stop immediately if no parquet files exist anywhere inside the folder.
+        if not any(base_dir.rglob("*.parquet")):
+            return
+
+        parquet_path = base_dir / "**" / "*.parquet"
+        
         # Register view over local files using DuckDB's native read_parquet
         self.con.execute(f"""
             CREATE VIEW IF NOT EXISTS flights AS
