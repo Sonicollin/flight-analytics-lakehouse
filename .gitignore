@@ -16,3 +16,7 @@ __pycache__/
 .venv/
 venv/
 env/
+
+# dbt generated artifacts
+dbt_project/target/
+dbt_project/logs/

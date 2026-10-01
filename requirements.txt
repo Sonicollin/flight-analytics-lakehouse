@@ -1,3 +1,5 @@
+dbt
+dbt-duckdb
 duckdb
 config
 pyarrow
