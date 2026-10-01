@@ -1,7 +1,9 @@
 duckdb
+config
 pyarrow
 polars
 httpx
 pytest
 pydantic
+pydantic_settings
 dlt

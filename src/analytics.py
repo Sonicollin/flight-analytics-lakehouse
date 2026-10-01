@@ -2,7 +2,7 @@ from pathlib import Path
 from typing import cast
 import duckdb
 import polars as pl
-from config import config
+from src.config import config
 
 class FlightAnalyticsEngine:
     """In-process DuckDB OLAP engine querying local Hive-partitioned Parquet files."""

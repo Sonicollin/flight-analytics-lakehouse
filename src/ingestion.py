@@ -1,8 +1,8 @@
 import dlt
 import httpx
 from pathlib import Path
-from config import config
-from contracts import validate_state_vectors
+from src.config import config
+from src.contracts import validate_state_vectors
 
 class BTSDataIngestor:
     """Streams and manages raw BTS Flight Delay data archives."""

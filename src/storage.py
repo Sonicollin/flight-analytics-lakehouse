@@ -3,7 +3,7 @@ from pathlib import Path
 import polars as pl
 import pyarrow as pa
 import pyarrow.dataset as ds
-from config import config
+from src.config import config
 
 class ParquetStorageEngine:
     """Converts raw BTS CSV archives into Hive-partitioned Parquet datasets."""
