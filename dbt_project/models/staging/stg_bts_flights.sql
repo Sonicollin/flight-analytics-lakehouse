@@ -14,5 +14,8 @@ SELECT
     arr_delay,
     air_time,
     distance,
-    CASE WHEN arr_delay > 15 THEN TRUE ELSE FALSE END AS is_delayed
+    CASE WHEN arr_delay IS NULL THEN NULL
+         WHEN arr_delay > 15 THEN TRUE
+        ELSE FALSE 
+    END AS is_delayed
 FROM raw_parquet    
