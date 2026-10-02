@@ -1,6 +1,6 @@
 WITH raw_parquet AS (
     SELECT *
-    FROM read_parquet('../data/processed/**/*.parquet', hive_partitioning=true)
+    FROM read_parquet('{{ var("bts_parquet_path") }}', hive_partitioning=true)
 )
 SELECT
     year,

@@ -3,5 +3,5 @@ flight_lakehouse:
   outputs:
     dev:
       type: duckdb
-      path: "C:/Users/yabu01-82403ierunway/新しいフォルダー/flight-analytics-lakehouse/data/processed/lakehouse.duckdb"
+      path: "{{ env_var('LAKEHOUSE_DB_PATH', '../data/processed/lakehouse.duckdb') }}"
       threads: 4

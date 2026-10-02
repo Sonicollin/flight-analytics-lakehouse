@@ -24,7 +24,10 @@ models:
         description: "True when arrival delay exceeds 15 minutes; null when arrival delay is unavailable."
 
   - name: stg_opensky_states
-    description: "Staging model for validated OpenSky aircraft state-vector data loaded into DuckDB."
+    description: "Staging model for validated OpenSky aircraft state-vector data loaded into DuckDB. Grain: one aircraft per snapshot."
+    tests:
+      - unique:
+          column_name: "icao24 || '-' || CAST(snapshot_timestamp AS VARCHAR)"
     columns:
       - name: icao24
         description: "24-bit ICAO transponder address identifyig an aircraft."

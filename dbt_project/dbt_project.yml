@@ -8,6 +8,9 @@ test-paths: ["tests"]
 seed-paths: ["seeds"]
 macro-paths: ["macros"]
 
+vars:
+  bts_parquet_path: "../data/processed/**/*.parquet"
+
 target-path: "target"
 clean-targets:
   - "target"
@@ -19,3 +22,4 @@ models:
       +materialized: view
     intermediate:
       +materialized: table
+
