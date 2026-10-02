@@ -1,7 +1,10 @@
 import argparse
+import os
 import subprocess
 import sys
 from pathlib import Path
+
+from src.config import config
 from src.ingestion import BTSDataIngestor, OpenSkyIngestor
 from src.storage import ParquetStorageEngine
 from src.analytics import FlightAnalyticsEngine
@@ -39,25 +42,42 @@ def run_opensky_pipeline() -> None:
 
 
 def run_dbt_transformations() -> None:
-    """Executes dbt models (staging views and intermediate tables)."""
+    """Builds and tests dbt staging and analytical models."""
     print("==================================================")
-    print("🛠️ Running dbt Transformations")
+    print("Running dbt Models and Tests")
     print("==================================================")
 
     if not DBT_PROJECT_DIR.exists():
-        print(f"Error: dbt project directory not found at {DBT_PROJECT_DIR}")
-        sys.exit(1)
+        raise FileNotFoundError(
+            f"dbt project directory not found: {DBT_PROJECT_DIR}"
+        )
+
+    # Supply dbt env_var() expression in profiles.yml with the same database and Parquet paths used by Python
+    env = os.environ.copy()
+    env["LAKEHOUSE_DB_PATH"] = str(config.DUCKDB_PATH.resolve())
+
+    parquet_glob = config.PROCESSED_DATA_DIR / "**" / "*.parquet"
+    dbt_vars = f"{{bts_parquet_path: '{parquet_glob.as_posix()}'}}"
 
     result = subprocess.run(
-        ["dbt", "run", "--profiles-dir", str(DBT_PROJECT_DIR), "--project-dir", str(DBT_PROJECT_DIR)],
-        check=False
+        [
+            "dbt",
+            "build", 
+            "--profiles-dir", str(DBT_PROJECT_DIR), 
+            "--project-dir", str(DBT_PROJECT_DIR),
+            "--vars", dbt_vars,
+        ],
+        env=env,
+        cwd=DBT_PROJECT_DIR, # Explicitly sets the subprocess's working directory to the dbt project folder.
+        check=False,
     )
 
     if result.returncode != 0:
-        print("❌ dbt transformation failed.")
-        sys.exit(result.returncode)
+        raise RunTimeError(
+            f"dbt build failed with exit code {result.returncode}"
+        )
 
-    print("✅ dbt Transformations Complete!\n")
+    print("dbt models and tests completed successfully!")
 
 
 def run_analytics_query() -> None:
