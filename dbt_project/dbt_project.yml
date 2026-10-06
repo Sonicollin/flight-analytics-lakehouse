@@ -3,15 +3,12 @@ version: '1.0.0'
 profile: 'flight_lakehouse'
 
 model-paths: ["models"]
-analysis-paths: ["analyses"]
-test-paths: ["tests"]
-seed-paths: ["seeds"]
-macro-paths: ["macros"]
 
 vars:
   bts_parquet_path: "../data/processed/**/*.parquet"
 
 target-path: "target"
+
 clean-targets:
   - "target"
   - "dbt_packages"
@@ -20,6 +17,4 @@ models:
   flight_lakehouse:
     staging:
       +materialized: view
-    intermediate:
-      +materialized: table
 

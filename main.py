@@ -73,7 +73,7 @@ def run_dbt_transformations() -> None:
     )
 
     if result.returncode != 0:
-        raise RunTimeError(
+        raise RuntimeError(
             f"dbt build failed with exit code {result.returncode}"
         )
 

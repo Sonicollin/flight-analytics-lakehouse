@@ -3,6 +3,8 @@ data/raw/*
 data/processed/*
 !data/raw/.gitkeep
 !data/processed/.gitkeep
+src/__pycache__/
+*.egg-info/
 
 # Pytest / Coverage
 .pytest_cache/
@@ -20,3 +22,5 @@ env/
 # dbt generated artifacts
 dbt_project/target/
 dbt_project/logs/
+dbt_project/.user.yml
+logs/
