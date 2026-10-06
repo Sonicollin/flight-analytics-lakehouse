@@ -26,7 +26,6 @@ class ParquetStorageEngine:
         with zipfile.ZipFile(zip_path, "r") as z:
             csv_filename = [f for f in z.namelist() if f.endswith(".csv")][0]
             with z.open(csv_filename) as csv_file:
-                # Use LazyFrame scan for out-of-core memory efficiency
                 df = pl.read_csv(
                     csv_file.read(),
                     infer_schema_length=10000,

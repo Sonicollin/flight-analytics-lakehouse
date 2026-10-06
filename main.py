@@ -81,17 +81,20 @@ def run_dbt_transformations() -> None:
 
 
 def run_analytics_query() -> None:
-    """Executes the DuckDB in-process OLAP analytics engine query."""
+    """Queries dbt-built analytical marts in DuckDB."""
     print("==================================================")
     print("📊 Executing Lakehouse Analytics Engine")
     print("==================================================")
 
     analytics_engine = FlightAnalyticsEngine()
     rankings = analytics_engine.get_carrier_delay_rankings()
+    activity = analytics_engine.get_aircraft_activity()
 
     print("\nCarrier Reliability Rankings:")
     print(rankings)
-    print("\n✅ Analytics Execution Complete!")
+
+    print("\nOpenSky Aircraft Activity:")
+    print(activity)
 
 
 def main() -> None:

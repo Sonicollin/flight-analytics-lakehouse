@@ -6,7 +6,7 @@ The project is designed to demonstrate a small, defensible analytics engineering
 
 ## Architecture
 
-The project contains two independent data flows with different grains and analytical purposes.
+The project contains two separate data flows with different grains and analytical purposes.
 
 ```text
 Historical BTS flight data
@@ -20,16 +20,20 @@ Polars / PyArrow
         v
 Hive-partitioned Parquet
         |
-        +-------------------+
-                            |
-                            v
-                          dbt
-                            |
-                            v
-                  stg_bts_flights
-                            |
-                            v
-               mart_carrier_performance
+        v
+       dbt
+        |
+        v
+ stg_bts_flights
+        |
+        v
+mart_carrier_performance
+        |
+        v
+Python analytics
+        |
+        v
+Carrier reliability rankings
 
 
 Live OpenSky aircraft states
@@ -41,21 +45,28 @@ REST API
 Pydantic validation
         |
         v
-dlt
+       dlt
         |
         v
-DuckDB raw_opensky_states
+      DuckDB
         |
         v
-      dbt
+       dbt
         |
         v
 stg_opensky_states
+        |
+        v
+mart_aircraft_activity
+        |
+        v
+Python analytics
+        |
+        v
+Aircraft activity summary
 ```
 
-The BTS and OpenSky datasets are intentionally not joined.
-
-BTS data represents completed commercial flight-performance records, while OpenSky provides point-in-time aircraft state vectors. Because the datasets do not share a reliable flight-level key or the same grain, forcing them into a direct join would create an artificial relationship.
+BTS data represents completed commercial flight-performance records, while OpenSky provides point-in-time aircraft state vectors. Because the datasets do not share a reliable flight-level key or the same grain, they are not joined.
 
 ## Tech Stack
 
@@ -83,14 +94,8 @@ The pipeline:
 1. downloads a monthly ZIP archive
 2. processes the source data with Python
 3. writes Hive-partitioned Parquet files
-4. exposes the data to dbt through DuckDB
-
-The BTS dataset is used to build carrier-level analytical metrics such as:
-
-- total flights
-- average departure delay
-- average arrival delay
-- percentage of flights arriving more than 15 minutes late
+4. exposes the Parquet dataset to dbt through DuckDB and dbt
+5. builds analytical models for carrier performance
 
 ### OpenSky Network
 
@@ -102,9 +107,8 @@ The pipeline:
 2. converts positional API arrays into named records
 3. validates records using Pydantic
 4. loads validated records into DuckDB with dlt
-5. stages the data with dbt
-
-The grain of the staging model is one aircraft observation per `icao24` and snapshot timestamp.
+5. stages and tests the data with dbt
+6. builds a snapshot-level aircraft activity mart
 
 ## dbt Models
 
@@ -118,14 +122,6 @@ The model standardizes the fields used for downstream analysis and creates an `i
 - `FALSE` when arrival delay is 15 minutes or less
 - `NULL` when arrival-delay information is unavailable
 
-### `stg_opensky_states`
-
-Stages validated OpenSky aircraft state vectors loaded into DuckDB.
-
-The model preserves aircraft identifiers, snapshot timestamps, position, velocity, and other state-vector attributes.
-
-Data tests verify required identifiers and the expected observation grain.
-
 ### `mart_carrier_performance`
 
 Produces one row per reporting carrier with historical performance metrics:
@@ -135,9 +131,34 @@ Produces one row per reporting carrier with historical performance metrics:
 - `avg_arr_delay`
 - `delayed_flight_pct`
 
-The delay percentage is calculated only for records with known arrival-delay status.
+### `stg_opensky_states`
 
-dbt tests enforce the carrier-level grain using `not_null` and `unique` tests on the carrier field.
+Stages validated OpenSky aircraft state vectors loaded into DuckDB.
+
+The model includes fields such as:
+
+- `aircraft ICAO identifier`
+- `snapshot timestamp`
+- `latitude and longitude`
+- `velocity`
+- `altitude`
+- `ground status`
+
+The model grain is one aircraft observation per icao24 and snapshot timestamp.
+
+dbt tests enforce required identifiers and composite uniqueness at that grain.
+
+### `mart_aircraft_activity`
+
+Produces one row per OpenSky snapshot.
+
+Metrics include:
+
+- `aircraft observed`
+- `aircraft airborne`
+- `aircraft on the ground`
+- `average velocity`
+- `average barometric altitude`
 
 ## Repository Structure
 
@@ -149,7 +170,11 @@ flight-analytics-lakehouse/
 ├── dbt_project/
 │   ├── models/
 │   │   ├── staging/
+│   │   │    ├── stg_bts_flights.sql
+│   │   │    ├── stg_opensky_states.sql
 │   │   └── marts/
+│   │   │    ├── mart_carrier_performance.sql
+│   │   │    ├── mart_aircraft_activity.sql
 │   ├── dbt_project.yml
 │   └── profiles.yml
 ├── src/
@@ -159,6 +184,10 @@ flight-analytics-lakehouse/
 │   ├── ingestion.py
 │   └── storage.py
 ├── tests/
+│   ├── test_analytics.py
+│   ├── test_config.py
+│   ├── test_contracts.py
+│   ├── test_ingestion.py
 ├── main.py
 ├── pyproject.toml
 └── README.md
@@ -168,21 +197,17 @@ Generated data, DuckDB files, dbt build artifacts, logs, Python caches, and othe
 
 ## Installation
 
-Python 3.11+ is recommended.
-
 Clone the repository and install the project with development dependencies:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/Sonicollin/flight-analytics-lakehouse.git
 cd flight-analytics-lakehouse
 pip install -e ".[dev]"
 ```
 
-The project uses `pyproject.toml` as its dependency definition.
-
 ## Running the Pipeline
 
-The main CLI allows each part of the project to be executed independently.
+The main CLI allows each part of the project to be executed independently or as one end-to-end workflow.
 
 ### Historical BTS ingestion
 
@@ -222,7 +247,11 @@ The command executes `dbt build`, which builds models and runs their associated 
 python main.py --run-analytics
 ```
 
-This queries the dbt-built `mart_carrier_performance` model from DuckDB and returns carrier reliability rankings.
+This queries both dbt-built marts.
+
+The historical branch returns carrier reliability rankings derived from `mart_carrier_performance`.
+
+The OpenSky branch returns snapshot-level aircraft activity from `mart_aircraft_activity`.
 
 ### Full end-to-end pipeline
 
@@ -243,22 +272,6 @@ analytical query
 ```
 
 ## Running Tests
-
-Run the Python test suite with:
-
-```bash
-pytest
-```
-
-The tests cover key parts of the ingestion and storage workflow, including:
-
-- BTS download behavior
-- mocked HTTP responses
-- OpenSky record normalization
-- Pydantic validation
-- dlt ingestion behavior
-- partitioned Parquet storage
-- DuckDB analytical queries
 
 dbt model and data tests are executed through:
 
@@ -302,14 +315,6 @@ DuckDB provides a lightweight local analytical database that can query both pers
 
 This keeps the project reproducible while still demonstrating warehouse-style analytical workflows.
 
-### dbt owns analytical transformations
-
-Carrier-performance business logic is modeled in dbt rather than duplicated inside Python.
-
-Python is responsible primarily for ingestion, validation, storage, orchestration, and consuming analytical outputs.
-
-This gives metric definitions a single source of truth.
-
 ### Data quality is explicit
 
 Pydantic validates OpenSky records before loading, while dbt tests enforce assumptions about analytical models and model grain.
@@ -325,24 +330,27 @@ Current limitations include:
 - OpenSky ingestion captures snapshots rather than maintaining a continuously running stream
 - local DuckDB storage is intended for single-user analytical workloads
 - historical BTS ingestion is executed by requested month rather than through a production scheduler
-- no attempt is made to create an artificial flight-level relationship between BTS and OpenSky
-- operational monitoring and alerting are outside the current scope
 
 These constraints are intentional. The project focuses on demonstrating a coherent analytics engineering workflow without introducing infrastructure that is unnecessary for the problem being solved.
 
 ## Example Analytical Output
 
-The carrier-performance mart can be queried directly through DuckDB or through the project's Python analytics layer.
-
-Example fields include:
-
-```text
-carrier
-total_flights
-avg_dep_delay
-avg_arr_delay
-delayed_flight_pct
-reliability_rank
-```
-
-The ranking output orders carriers by average arrival delay while preserving the dbt mart as the source of the underlying carrier-performance metrics.
+Carrier Reliability Rankings:
+shape: (15, 6)
+┌─────────┬───────────────┬───────────────┬───────────────┬────────────────────┬──────────────────┐
+│ carrier ┆ total_flights ┆ avg_dep_delay ┆ avg_arr_delay ┆ delayed_flight_pct ┆ reliability_rank │
+│ ---     ┆ ---           ┆ ---           ┆ ---           ┆ ---                ┆ ---              │
+│ str     ┆ i64           ┆ f64           ┆ f64           ┆ f64                ┆ i64              │
+╞═════════╪═══════════════╪═══════════════╪═══════════════╪════════════════════╪══════════════════╡
+│ AS      ┆ 61185         ┆ 5.83          ┆ 1.7           ┆ 18.34              ┆ 1                │
+│ DL      ┆ 250146        ┆ 8.16          ┆ 2.02          ┆ 15.53              ┆ 2                │
+│ OH      ┆ 55097         ┆ 7.67          ┆ 2.21          ┆ 16.3               ┆ 3                │
+│ YX      ┆ 83136         ┆ 6.6           ┆ 2.65          ┆ 18.63              ┆ 4                │
+│ MQ      ┆ 71367         ┆ 6.78          ┆ 3.79          ┆ 18.11              ┆ 5                │
+│ …       ┆ …             ┆ …             ┆ …             ┆ …                  ┆ …                │
+│ NK      ┆ 51062         ┆ 13.62         ┆ 7.52          ┆ 21.88              ┆ 11               │
+│ B6      ┆ 57865         ┆ 14.78         ┆ 8.12          ┆ 23.9               ┆ 12               │
+│ AA      ┆ 237788        ┆ 15.26         ┆ 9.75          ┆ 21.62              ┆ 13               │
+│ G4      ┆ 26010         ┆ 11.87         ┆ 9.76          ┆ 22.16              ┆ 14               │
+│ F9      ┆ 45116         ┆ 16.71         ┆ 11.51         ┆ 24.69              ┆ 15               │
+└─────────┴───────────────┴───────────────┴───────────────┴────────────────────┴──────────────────┘

@@ -56,3 +56,27 @@ models:
         description: "Average arrival delay in minutes."
       - name: delayed_flight_pct
         description: "Percentage of flights with known arrival-delay status that arrived more than 15 minutes late."
+  - name: mart_aircraft_activity
+    description: "Snapshot of aircraft activity derived from OpenSky vector state data."
+    columns:
+      - name: snapshot_timestamp
+        description: "The time the snapshot was taken"
+        tests:
+          - not_null
+          - unique
+      - name: aircraft_observed
+        description: "Number of aircraft observed at this time"
+        tests:
+          - not_null
+      - name: aircraft_on_ground
+        description: "Number of aircraft on the ground"
+        tests:
+          - not_null
+      - name: aircraft_airborne
+        description: "Number of aircraft in the air"
+        tests:
+          - not_null
+      - name: avg_velocity
+        description: "Average velocity of all aircraft"
+      - name: avg_baro_altitude
+        description: "Average baro altitude of all aircraft"

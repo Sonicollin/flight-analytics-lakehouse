@@ -1,4 +1,3 @@
-from pathlib import Path
 from typing import cast
 import duckdb
 import polars as pl
@@ -33,9 +32,32 @@ class FlightAnalyticsEngine:
         arrow_table = self.con.execute(query).to_arrow_table()
         return cast(pl.DataFrame, pl.from_arrow(arrow_table))
 
+    def get_aircraft_activity(self) -> pl.DataFrame:
+        """
+        Returns snapshot-level OpenSky aircraft activity metrics.
+        """
+        query = """
+            SELECT
+                snapshot_timestamp,
+                aircraft_observed,
+                aircraft_airborne,
+                aircraft_on_ground,
+                avg_velocity,
+                avg_baro_altitude
+            FROM mart_aircraft_activity
+            ORDER BY snapshot_timestamp DESC
+        """
+
+        arrow_table = self.con.execute(query).to_arrow_table()
+        return cast(pl.DataFrame, pl.from_arrow(arrow_table))
+
+
 if __name__ == "__main__":
     # Smoke test: Query local Lakehouse
     analytics = FlightAnalyticsEngine()
     rankings = analytics.get_carrier_delay_rankings()
-    print("--- Carrier Delay Rankings (DuckDB OLAP) ---")
+    aircraft_stats = analytics.get_aircraft_activity()
+    print("--- Carrier Delay Rankings ---")
     print(rankings)
+    print("--- Aircraft Activity Statistics ---")
+    print(aircraft_stats)

@@ -24,3 +24,6 @@ dbt_project/target/
 dbt_project/logs/
 dbt_project/.user.yml
 logs/
+
+# Old files I don't want tracked.
+old/
