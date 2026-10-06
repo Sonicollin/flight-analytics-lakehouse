@@ -10,11 +10,15 @@ dependencies = [
     "pyarrow",
     "polars",
     "httpx",
-    "pytest",
     "pydantic",
     "pydantic-settings",
     "dlt[duckdb]",
     "dbt-duckdb",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
 ]
 
 [tool.pytest.ini_options]
