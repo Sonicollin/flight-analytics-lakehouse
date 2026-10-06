@@ -202,7 +202,7 @@ Clone the repository and install the project with development dependencies:
 ```bash
 git clone https://github.com/Sonicollin/flight-analytics-lakehouse.git
 cd flight-analytics-lakehouse
-pip install -e ".[dev]"
+pip install -e .
 ```
 
 ## Running the Pipeline
@@ -289,25 +289,7 @@ dbt build
 
 Application paths are defined relative to the repository through the Python configuration layer.
 
-dbt receives the DuckDB database path through the `LAKEHOUSE_DB_PATH` environment variable when executed from `main.py`.
-
-The BTS Parquet source path is defined as a dbt variable and can be overridden when necessary.
-
-This avoids machine-specific absolute paths and allows the project to be cloned and executed on another system without editing local filesystem paths.
-
 ## Design Decisions
-
-### Separate BTS and OpenSky models
-
-The two datasets are intentionally modeled independently because they represent different entities and grains.
-
-A direct join would require an assumed flight-level relationship that the available source data does not reliably provide.
-
-### Parquet for historical data
-
-Historical BTS data is stored as Hive-partitioned Parquet rather than loaded entirely into a database table.
-
-This provides a compact analytical format and allows DuckDB to query the files directly.
 
 ### DuckDB as the analytical engine
 
@@ -331,10 +313,11 @@ Current limitations include:
 - local DuckDB storage is intended for single-user analytical workloads
 - historical BTS ingestion is executed by requested month rather than through a production scheduler
 
-These constraints are intentional. The project focuses on demonstrating a coherent analytics engineering workflow without introducing infrastructure that is unnecessary for the problem being solved.
+These constraints are intentional. The project focuses on demonstrating a coherent analytics engineering workflow.
 
 ## Example Analytical Output
 
+```text
 Carrier Reliability Rankings:
 shape: (15, 6)
 ┌─────────┬───────────────┬───────────────┬───────────────┬────────────────────┬──────────────────┐
@@ -354,3 +337,16 @@ shape: (15, 6)
 │ G4      ┆ 26010         ┆ 11.87         ┆ 9.76          ┆ 22.16              ┆ 14               │
 │ F9      ┆ 45116         ┆ 16.71         ┆ 11.51         ┆ 24.69              ┆ 15               │
 └─────────┴───────────────┴───────────────┴───────────────┴────────────────────┴──────────────────┘
+OpenSky Aircraft Activity:
+shape: (4, 6)
+┌──────────────────────────┬───────────────────┬───────────────────┬────────────────────┬──────────────┬───────────────────┐
+│ snapshot_timestamp       ┆ aircraft_observed ┆ aircraft_airborne ┆ aircraft_on_ground ┆ avg_velocity ┆ avg_baro_altitude │
+│ ---                      ┆ ---               ┆ ---               ┆ ---                ┆ ---          ┆ ---               │
+│ datetime[μs, Asia/Tokyo] ┆ i64               ┆ decimal[38,0]     ┆ decimal[38,0]      ┆ f64          ┆ f64               │
+╞══════════════════════════╪═══════════════════╪═══════════════════╪════════════════════╪══════════════╪═══════════════════╡
+│ 2026-10-06 13:33:48 JST  ┆ 2256              ┆ 1910              ┆ 346                ┆ 149.8        ┆ 6784.6            │
+│ 2026-10-06 11:18:45 JST  ┆ 4406              ┆ 3894              ┆ 512                ┆ 154.3        ┆ 6675.74           │
+│ 2026-10-06 10:27:44 JST  ┆ 5067              ┆ 4432              ┆ 635                ┆ 143.62       ┆ 6200.83           │
+│ 2026-10-06 10:05:16 JST  ┆ 5307              ┆ 4680              ┆ 627                ┆ 142.23       ┆ 6074.85           │
+└──────────────────────────┴───────────────────┴───────────────────┴────────────────────┴──────────────┴───────────────────┘
+```
